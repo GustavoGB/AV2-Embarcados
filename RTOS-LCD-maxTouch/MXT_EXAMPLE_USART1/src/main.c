@@ -273,7 +273,7 @@ uint32_t convert_axis_system_y(uint32_t touch_x) {
 	return ILI9488_LCD_HEIGHT*touch_x/4096;
 }
 
-void update_screen(uint32_t tx, uint32_t ty) {
+void update_screen() {
 	ili9488_draw_filled_rectangle(100, 350,110,380);
 	sprintf(bufferPotencia,"%d",potencio_convertida);
 	font_draw_text(&digital52, bufferPotencia, 110, 380, 1);
@@ -410,10 +410,11 @@ void task_lcd(void){
 	touchData touch;
 	
 	while (true) {
+		update_screen();
 			
 		}
 	}
-}
+
 //Essa funcao fara a regra de 3 da voltagem para saber a conversao em bits - NAO EH UMA TASK
 static int32_t convertAnalogic(int32_t ADC_value){
 	
