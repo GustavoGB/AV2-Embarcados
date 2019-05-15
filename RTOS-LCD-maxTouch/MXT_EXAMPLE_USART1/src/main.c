@@ -410,9 +410,7 @@ void task_lcd(void){
 	touchData touch;
 	
 	while (true) {
-		if (xQueueReceive( xQueueTouch, &(touch), ( TickType_t )  500 / portTICK_PERIOD_MS)) {
-			update_screen(touch.x, touch.y);
-			printf("x:%d y:%d\n", touch.x, touch.y);
+			
 		}
 	}
 }
@@ -434,6 +432,15 @@ static int32_t convertAnalogic(int32_t ADC_value){
 //Organizar as tasks
 
 void taskPotencio(void *pvParameters){
+	//Setar para 4 segundos
+	const TickType_t xDelay = 4000 / portTICK_PERIOD_MS;
+	UNUSED(pvParameters);
+	while (true) {
+		AFEC_callback();
+		//atualizar o valor do potenciometro usando a funcao de conversao
+		potencio_convertida = convertAnalogic(potencio_ul_value);
+		vTaskDelay(xDelay);
+	}
 	
 }
 
