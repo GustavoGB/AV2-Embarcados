@@ -13,25 +13,6 @@
 #include "termometro.h"
 
 /************************************************************************/
-/* Globals                                                              */
-/************************************************************************/
-volatile uint32_t g_ul_value = 0;
-/* Canal do sensor de temperatura */
-#define AFEC_CHANNEL 0
-
-/************************************************************************/
-/* LCD + TOUCH                                                          */
-/************************************************************************/
-#define MAX_ENTRIES        3
-
-struct ili9488_opt_t g_ili9488_display_opt;
-const uint32_t BUTTON_W = 120;
-const uint32_t BUTTON_H = 150;
-const uint32_t BUTTON_BORDER = 2;
-const uint32_t BUTTON_X = ILI9488_LCD_WIDTH/2;
-const uint32_t BUTTON_Y = ILI9488_LCD_HEIGHT/2;
-
-/************************************************************************/
 /* RTOS                                                                  */
 /************************************************************************/
 #define TASK_MXT_STACK_SIZE            (2*1024/sizeof(portSTACK_TYPE))
@@ -43,6 +24,44 @@ const uint32_t BUTTON_Y = ILI9488_LCD_HEIGHT/2;
 #define TASK_AFEC_STACK_SIZE            (2*1024/sizeof(portSTACK_TYPE))
 #define TASK_AFEC_STACK_PRIORITY        (tskIDLE_PRIORITY)
 
+/************************************************************************/
+/* AFEC                                                             */
+/************************************************************************/
+
+/** Reference voltage for AFEC,in mv. */
+#define VOLT        (3300) 
+/* Canal do sensor de temperatura */
+#define AFEC_CHANNEL 0
+//PD30
+#define AFEC_CHANNEL_POT_SENSOR 0 
+
+/** The maximal digital value */
+/** 2^12 - 1                  */
+#define MAX_DIGITAL     (4095)
+
+/************************************************************************/
+/* LCD + TOUCH                                                          */
+/************************************************************************/
+#define MAX_ENTRIES  3
+
+struct ili9488_opt_t g_ili9488_display_opt;
+const uint32_t BUTTON_W = 120;
+const uint32_t BUTTON_H = 150;
+const uint32_t BUTTON_BORDER = 2;
+const uint32_t BUTTON_X = ILI9488_LCD_WIDTH/2;
+const uint32_t BUTTON_Y = ILI9488_LCD_HEIGHT/2;
+
+
+//Potenciometro
+
+//Volatile pela interrupcao do hardware
+volatile uint32_t potencio_ul_value;
+
+volatile uint32_t potencio_convertida = 0;
+
+
+char bufferPotencia[32];
+
 typedef struct {
 	uint x;
 	uint y;
@@ -51,6 +70,9 @@ typedef struct {
 
 QueueHandle_t xQueueTouch;
 SemaphoreHandle_t xSemaphore;
+
+
+void pot_callback(void);
 
 
 /************************************************************************/
@@ -96,6 +118,12 @@ extern void vApplicationMallocFailedHook(void)
 
 	/* Force an assert. */
 	configASSERT( ( volatile void * ) NULL );
+	
+	
+	
+	/** Semaforo a ser usado pela task potenciometro */
+	SemaphoreHandle_t xSemaphore; 
+	
 }
 
 /************************************************************************/
@@ -208,20 +236,6 @@ static void mxt_init(struct mxt_device *device)
 }
 
 
-/************************************************************************/
-/* Callbacks: / Handler                                                 */
-/************************************************************************/
-static void AFEC_callback(void)
-{
-	BaseType_t xHigherPriorityTaskWoken = pdFALSE;
-	//printf("but_callback \n");
-	xSemaphoreGiveFromISR(xSemaphore, &xHigherPriorityTaskWoken);
-	//printf("semafaro tx \n");
-}
-
-/************************************************************************/
-/* funcoes                                                              */
-/************************************************************************/
 void font_draw_text(tFont *font, const char *text, int x, int y, int spacing) {
 	char *p = text;
 	while(*p != NULL) {
@@ -246,21 +260,6 @@ void draw_screen(void) {
 	ili9488_draw_pixmap(210, 20, soneca.width, soneca.height, soneca.data);
 }
 
-void draw_button(uint32_t clicked) {
-	static uint32_t last_state = 255; // undefined
-	if(clicked == last_state) return;
-	
-	ili9488_set_foreground_color(COLOR_CONVERT(COLOR_BLACK));
-	ili9488_draw_filled_rectangle(BUTTON_X-BUTTON_W/2, BUTTON_Y-BUTTON_H/2, BUTTON_X+BUTTON_W/2, BUTTON_Y+BUTTON_H/2);
-	if(clicked) {
-		ili9488_set_foreground_color(COLOR_CONVERT(COLOR_TOMATO));
-		ili9488_draw_filled_rectangle(BUTTON_X-BUTTON_W/2+BUTTON_BORDER, BUTTON_Y+BUTTON_BORDER, BUTTON_X+BUTTON_W/2-BUTTON_BORDER, BUTTON_Y+BUTTON_H/2-BUTTON_BORDER);
-		} else {
-		ili9488_set_foreground_color(COLOR_CONVERT(COLOR_GREEN));
-		ili9488_draw_filled_rectangle(BUTTON_X-BUTTON_W/2+BUTTON_BORDER, BUTTON_Y-BUTTON_H/2+BUTTON_BORDER, BUTTON_X+BUTTON_W/2-BUTTON_BORDER, BUTTON_Y-BUTTON_BORDER);
-	}
-	last_state = clicked;
-}
 
 uint32_t convert_axis_system_x(uint32_t touch_y) {
 	// entrada: 4096 - 0 (sistema de coordenadas atual)
@@ -276,6 +275,7 @@ uint32_t convert_axis_system_y(uint32_t touch_x) {
 
 void update_screen(uint32_t tx, uint32_t ty) {
 }
+
 
 void mxt_handler(struct mxt_device *device, uint *x, uint *y)
 {
@@ -313,6 +313,25 @@ void mxt_handler(struct mxt_device *device, uint *x, uint *y)
 	} while ((mxt_is_message_pending(device)) & (i < MAX_ENTRIES));
 }
 
+
+/************************************************************************/
+/* funcoes                                                              */
+/************************************************************************/
+
+void pot_callback(void)
+{
+	BaseType_t xHigherPriorityTaskWoken = pdFALSE;
+	//printf("but_callback \n");
+	xSemaphoreGiveFromISR(xSemaphore, &xHigherPriorityTaskWoken);
+	//printf("semafaro tx \n");
+}
+
+static void AFEC_callback(void)
+{
+	afec_channel_enable(AFEC0, AFEC_CHANNEL_POT_SENSOR);
+	afec_start_software_conversion(AFEC0);
+	potencio_ul_value = afec_channel_get_value(AFEC0, AFEC_CHANNEL_POT_SENSOR);
+}
 
 static void config_ADC(void){
 	afec_enable(AFEC0);
@@ -404,7 +423,7 @@ void task_convert(void){
 			
 			//100ms
 			const TickType_t xDelay = 100/ portTICK_PERIOD_MS;
-			g_ul_value = afec_channel_get_value(AFEC0, AFEC_CHANNEL);
+			potencio_convertida = afec_channel_get_value(AFEC0, AFEC_CHANNEL);
 			
 		}
 	}
