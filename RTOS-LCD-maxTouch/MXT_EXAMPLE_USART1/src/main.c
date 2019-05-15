@@ -274,6 +274,9 @@ uint32_t convert_axis_system_y(uint32_t touch_x) {
 }
 
 void update_screen(uint32_t tx, uint32_t ty) {
+	ili9488_draw_filled_rectangle(100, 350,110,380);
+	sprintf(bufferPotencia,"%d",potencio_convertida);
+	font_draw_text(&digital52, bufferPotencia, 110, 380, 1);
 }
 
 
@@ -413,21 +416,27 @@ void task_lcd(void){
 		}
 	}
 }
+//Essa funcao fara a regra de 3 da voltagem para saber a conversao em bits - NAO EH UMA TASK
+static int32_t convertAnalogic(int32_t ADC_value){
+	
+	int32_t val_vol;
+	int32_t val_temp;
+	
+	/* converte bits -> tensão (Volts)
+   */
+	val_vol = ADC_value * VOLT / (float) MAX_DIGITAL;
+	val_vol = val_vol*100/3300;
 
-void task_convert(void){
+	return(val_vol);
 	
-	xSemaphore = xSemaphoreCreateBinary();
-	
-	for (;;) {
-		if( xSemaphoreTake(xSemaphore, ( TickType_t ) 10) == pdTRUE ){
-			
-			//100ms
-			const TickType_t xDelay = 100/ portTICK_PERIOD_MS;
-			potencio_convertida = afec_channel_get_value(AFEC0, AFEC_CHANNEL);
-			
-		}
-	}
 }
+
+//Organizar as tasks
+
+void taskPotencio(void *pvParameters){
+	
+}
+
 
 /************************************************************************/
 /* main                                                                 */
@@ -464,7 +473,7 @@ int main(void)
 	}
 	
 	/* Create task to AFEC converter */
-	if (xTaskCreate(task_convert, "afec", TASK_AFEC_STACK_SIZE, NULL, TASK_AFEC_STACK_PRIORITY, NULL) != pdPASS) {
+	if (xTaskCreate(taskPotencio, "afec", TASK_AFEC_STACK_SIZE, NULL, TASK_AFEC_STACK_PRIORITY, NULL) != pdPASS) {
 		printf("Failed to create test led task\r\n");
 	}
 
