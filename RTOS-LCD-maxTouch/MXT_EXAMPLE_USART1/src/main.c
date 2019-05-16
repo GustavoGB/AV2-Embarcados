@@ -25,6 +25,28 @@
 #define TASK_AFEC_STACK_PRIORITY        (tskIDLE_PRIORITY)
 
 /************************************************************************/
+/* PIOS OLED                                                                 */
+/************************************************************************/
+//butao 1 oled
+#define EBUT1_PIO PIOD // EXT 9 PD28
+#define EBUT1_PIO_ID 16
+#define EBUT1_PIO_IDX 28u
+#define EBUT1_PIO_IDX_MASK (1u << EBUT1_PIO_IDX)
+//butao 2 oled
+#define EBUT2_PIO PIOA //  Ext 4 PA19 PA = 10
+#define EBUT2_PIO_ID 10
+#define EBUT2_PIO_IDX 19u
+#define EBUT2_PIO_IDX_MASK (1u << EBUT2_PIO_IDX)
+
+/** PWM frequency in Hz */
+#define PWM_FREQUENCY      1000
+/** Period value of PWM output waveform */
+#define PERIOD_VALUE       100
+/** Initial duty cycle value */
+#define INIT_DUTY_VALUE    0
+
+
+/************************************************************************/
 /* AFEC                                                             */
 /************************************************************************/
 
@@ -69,7 +91,6 @@ typedef struct {
 
 
 QueueHandle_t xQueueTouch;
-SemaphoreHandle_t xSemaphore;
 
 
 void pot_callback(void);
@@ -119,12 +140,12 @@ extern void vApplicationMallocFailedHook(void)
 	/* Force an assert. */
 	configASSERT( ( volatile void * ) NULL );
 	
-	
-	
-	/** Semaforo a ser usado pela task potenciometro */
-	SemaphoreHandle_t xSemaphore; 
-	
 }
+	
+	/** Semaforo a ser usado pelas tasks */
+	SemaphoreHandle_t xSemaphorePot; 
+	SemaphoreHandle_t xSemaphorePwm;
+
 
 /************************************************************************/
 /* init                                                                 */
@@ -318,16 +339,21 @@ void mxt_handler(struct mxt_device *device, uint *x, uint *y)
 
 
 /************************************************************************/
-/* funcoes                                                              */
+/* funcoes e Callbacks                                                   */
 /************************************************************************/
 
 void pot_callback(void)
 {
 	BaseType_t xHigherPriorityTaskWoken = pdFALSE;
-	//printf("but_callback \n");
-	xSemaphoreGiveFromISR(xSemaphore, &xHigherPriorityTaskWoken);
-	//printf("semafaro tx \n");
+	xSemaphoreGiveFromISR(xSemaphorePot, &xHigherPriorityTaskWoken);
 }
+
+void pwm_callback(void)
+{
+	BaseType_t xHigherPriorityTaskWoken = pdFALSE;
+	xSemaphoreGiveFromISR(xSemaphorePwm, &xHigherPriorityTaskWoken);
+}
+
 
 static void AFEC_callback(void)
 {
@@ -377,10 +403,25 @@ static void config_ADC(void){
 	afec_channel_enable(AFEC0, AFEC_CHANNEL);
 }
 
+
+//Essa funcao fara a regra de 3 da voltagem para saber a conversao em bits - NAO EH UMA TASK
+static int32_t convertAnalogic(int32_t ADC_value){
+	
+	int32_t val_vol;
+	int32_t val_temp;
+	
+	/* converte bits -> tensão (Volts)
+   */
+	val_vol = ADC_value * VOLT / (float) MAX_DIGITAL;
+	val_vol = val_vol*100/3300;
+
+	return(val_vol);
+	
+}
+
 /************************************************************************/
 /* tasks                                                                */
 /************************************************************************/
-
 void task_mxt(void){
 	
 	struct mxt_device device; /* Device data container */
@@ -399,14 +440,22 @@ void task_mxt(void){
 }
 
 void task_lcd(void){
+	
+	const TickType_t xDelay = 4000/ portTICK_PERIOD_MS;
+	
 	xQueueTouch = xQueueCreate( 10, sizeof( touchData ) );
 	configure_lcd();
 	
 	draw_screen();
-	//draw_button(0);
+	
 	// Escreve HH:MM no LCD
 	font_draw_text(&digital52, "HH:MM", 0, 0, 1);
 	
+	// Aumentar o Ciclo
+	xSemaphorePot = xSemaphoreCreateBinary();
+	// Diminuir o Ciclo
+	xSemaphorePwm = xSemaphoreCreateBinary(); 
+
 	touchData touch;
 	
 	while (true) {
@@ -414,23 +463,6 @@ void task_lcd(void){
 			
 		}
 	}
-
-//Essa funcao fara a regra de 3 da voltagem para saber a conversao em bits - NAO EH UMA TASK
-static int32_t convertAnalogic(int32_t ADC_value){
-	
-	int32_t val_vol;
-	int32_t val_temp;
-	
-	/* converte bits -> tensão (Volts)
-   */
-	val_vol = ADC_value * VOLT / (float) MAX_DIGITAL;
-	val_vol = val_vol*100/3300;
-
-	return(val_vol);
-	
-}
-
-//Organizar as tasks
 
 void taskPotencio(void *pvParameters){
 	//Setar para 4 segundos
@@ -466,6 +498,8 @@ int main(void)
 	
 	/* inicializa e configura adc */
 	config_ADC();
+	
+	afec_start_software_conversion(AFEC0);
 	
 	/* Initialize stdio on USART */
 	stdio_serial_init(USART_SERIAL_EXAMPLE, &usart_serial_options);
