@@ -2,6 +2,8 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
+src\ASF\sam\drivers\pwm\pwm.c
+
 src\ASF\common\components\touch\mxt\mxt_device_1.c
 
 src\ASF\common\services\clock\same70\sysclk.c

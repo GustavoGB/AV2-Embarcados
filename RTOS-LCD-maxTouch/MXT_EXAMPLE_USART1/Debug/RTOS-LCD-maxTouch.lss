@@ -9,39 +9,39 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
   2 .relocate     000009c0  20400000  004557ac  00070000  2**3
                   CONTENTS, ALLOC, LOAD, CODE
-  3 .bss          0000bf10  204009c0  0045616c  000709c0  2**2
+  3 .bss          0000bf6c  204009c0  0045616c  000709c0  2**2
                   ALLOC
-  4 .stack        00002000  2040c8d0  0046207c  000709c0  2**0
+  4 .stack        00002004  2040c92c  004620d8  000709c0  2**0
                   ALLOC
-  5 .heap         00000200  2040e8d0  0046407c  000709c0  2**0
+  5 .heap         00000200  2040e930  004640dc  000709c0  2**0
                   ALLOC
   6 .ARM.attributes 0000002e  00000000  00000000  000709c0  2**0
                   CONTENTS, READONLY
   7 .comment      00000059  00000000  00000000  000709ee  2**0
                   CONTENTS, READONLY
-  8 .debug_info   0002b2ef  00000000  00000000  00070a47  2**0
+  8 .debug_info   0002c3b2  00000000  00000000  00070a47  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_abbrev 00005941  00000000  00000000  0009bd36  2**0
+  9 .debug_abbrev 00005979  00000000  00000000  0009cdf9  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    0000de1e  00000000  00000000  000a1677  2**0
+ 10 .debug_loc    0000dece  00000000  00000000  000a2772  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_aranges 000012c0  00000000  00000000  000af495  2**0
+ 11 .debug_aranges 000012c8  00000000  00000000  000b0640  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00001568  00000000  00000000  000b0755  2**0
+ 12 .debug_ranges 00001570  00000000  00000000  000b1908  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_macro  00026700  00000000  00000000  000b1cbd  2**0
+ 13 .debug_macro  0000e367  00000000  00000000  000b2e78  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_line   000166bb  00000000  00000000  000d83bd  2**0
+ 14 .debug_line   0001670f  00000000  00000000  000c11df  2**0
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_str    0009ebe8  00000000  00000000  000eea78  2**0
+ 15 .debug_str    0009f0db  00000000  00000000  000d78ee  2**0
                   CONTENTS, READONLY, DEBUGGING
- 16 .debug_frame  00004268  00000000  00000000  0018d660  2**2
+ 16 .debug_frame  0000428c  00000000  00000000  001769cc  2**2
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
 
 00400000 <exception_table>:
-  400000:	d0 e8 40 20 0d 1e 40 00 0b 1e 40 00 0b 1e 40 00     ..@ ..@...@...@.
+  400000:	30 e9 40 20 0d 1e 40 00 0b 1e 40 00 0b 1e 40 00     0.@ ..@...@...@.
   400010:	0b 1e 40 00 0b 1e 40 00 0b 1e 40 00 00 00 00 00     ..@...@...@.....
 	...
   40002c:	e5 21 40 00 0b 1e 40 00 00 00 00 00 85 22 40 00     .!@...@......"@.
@@ -5176,7 +5176,7 @@ __always_inline static void fpu_enable(void)
   401ea8:	20400000 	.word	0x20400000
   401eac:	004557ac 	.word	0x004557ac
   401eb0:	204009c0 	.word	0x204009c0
-  401eb4:	2040c8d0 	.word	0x2040c8d0
+  401eb4:	2040c92c 	.word	0x2040c92c
   401eb8:	204009c0 	.word	0x204009c0
   401ebc:	e000ed00 	.word	0xe000ed00
   401ec0:	00400000 	.word	0x00400000
@@ -5491,7 +5491,7 @@ void system_init_flash( uint32_t ul_clk )
   402096:	bf00      	nop
   402098:	20400e10 	.word	0x20400e10
   40209c:	2045fffc 	.word	0x2045fffc
-  4020a0:	2040ead0 	.word	0x2040ead0
+  4020a0:	2040eb30 	.word	0x2040eb30
 
 004020a4 <_close>:
 }
@@ -9662,7 +9662,7 @@ static void AFEC_callback(void)
   403d5c:	4770      	bx	lr
   403d5e:	bf00      	nop
   403d60:	4003c000 	.word	0x4003c000
-  403d64:	2040c870 	.word	0x2040c870
+  403d64:	2040c8ac 	.word	0x2040c8ac
 
 00403d68 <taskPotencio>:
 		update_screen();
@@ -9715,7 +9715,7 @@ void taskPotencio(void *pvParameters){
   403db8:	00403d49 	.word	0x00403d49
   403dbc:	457ff000 	.word	0x457ff000
   403dc0:	9ee009ef 	.word	0x9ee009ef
-  403dc4:	2040c870 	.word	0x2040c870
+  403dc4:	2040c8ac 	.word	0x2040c8ac
   403dc8:	2040c75c 	.word	0x2040c75c
   403dcc:	004032e9 	.word	0x004032e9
 
@@ -10191,7 +10191,7 @@ void update_screen() {
   4040de:	bd10      	pop	{r4, pc}
   4040e0:	0040100d 	.word	0x0040100d
   4040e4:	2040c75c 	.word	0x2040c75c
-  4040e8:	2040c884 	.word	0x2040c884
+  4040e8:	2040c8e0 	.word	0x2040c8e0
   4040ec:	004554b8 	.word	0x004554b8
   4040f0:	00404ee5 	.word	0x00404ee5
   4040f4:	0040aa00 	.word	0x0040aa00
@@ -10255,8 +10255,8 @@ void task_lcd(void){
   404154:	47a0      	blx	r4
   404156:	e7fd      	b.n	404154 <task_lcd+0x58>
   404158:	00402761 	.word	0x00402761
-  40415c:	2040c8a4 	.word	0x2040c8a4
-  404160:	2040c874 	.word	0x2040c874
+  40415c:	2040c900 	.word	0x2040c900
+  404160:	2040c8d0 	.word	0x2040c8d0
   404164:	00fcfcfc 	.word	0x00fcfcfc
   404168:	00400e49 	.word	0x00400e49
   40416c:	00404011 	.word	0x00404011
@@ -10264,7 +10264,7 @@ void task_lcd(void){
   404174:	0040aa00 	.word	0x0040aa00
   404178:	00403fb1 	.word	0x00403fb1
   40417c:	2040c868 	.word	0x2040c868
-  404180:	2040c86c 	.word	0x2040c86c
+  404180:	2040c8a8 	.word	0x2040c8a8
   404184:	004040a9 	.word	0x004040a9
 
 00404188 <mxt_handler>:
@@ -10539,7 +10539,7 @@ static inline uint32_t twihs_master_setup(twihs_master_t p_twihs,
   404370:	004004ad 	.word	0x004004ad
   404374:	0040056d 	.word	0x0040056d
   404378:	00404189 	.word	0x00404189
-  40437c:	2040c8a4 	.word	0x2040c8a4
+  40437c:	2040c900 	.word	0x2040c900
   404380:	004032e9 	.word	0x004032e9
   404384:	004027dd 	.word	0x004027dd
 
@@ -11542,13 +11542,13 @@ static inline void stdio_serial_init(volatile void *usart, const usart_serial_op
   404d08:	4801      	ldr	r0, [pc, #4]	; (404d10 <__malloc_lock+0x8>)
   404d0a:	f003 bf79 	b.w	408c00 <__retarget_lock_acquire_recursive>
   404d0e:	bf00      	nop
-  404d10:	2040c8b8 	.word	0x2040c8b8
+  404d10:	2040c914 	.word	0x2040c914
 
 00404d14 <__malloc_unlock>:
   404d14:	4801      	ldr	r0, [pc, #4]	; (404d1c <__malloc_unlock+0x8>)
   404d16:	f003 bf75 	b.w	408c04 <__retarget_lock_release_recursive>
   404d1a:	bf00      	nop
-  404d1c:	2040c8b8 	.word	0x2040c8b8
+  404d1c:	2040c914 	.word	0x2040c914
 
 00404d20 <_sbrk_r>:
   404d20:	b538      	push	{r3, r4, r5, lr}
@@ -11566,7 +11566,7 @@ static inline void stdio_serial_init(volatile void *usart, const usart_serial_op
   404d3a:	d0fb      	beq.n	404d34 <_sbrk_r+0x14>
   404d3c:	602b      	str	r3, [r5, #0]
   404d3e:	bd38      	pop	{r3, r4, r5, pc}
-  404d40:	2040c8cc 	.word	0x2040c8cc
+  404d40:	2040c928 	.word	0x2040c928
 
 00404d44 <setbuf>:
   404d44:	2900      	cmp	r1, #0
@@ -17037,20 +17037,20 @@ static inline void stdio_serial_init(volatile void *usart, const usart_serial_op
   4084aa:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
   4084ae:	f000 bba9 	b.w	408c04 <__retarget_lock_release_recursive>
   4084b2:	bf00      	nop
-  4084b4:	2040c8b4 	.word	0x2040c8b4
+  4084b4:	2040c910 	.word	0x2040c910
   4084b8:	00408409 	.word	0x00408409
 
 004084bc <__sfp_lock_acquire>:
   4084bc:	4801      	ldr	r0, [pc, #4]	; (4084c4 <__sfp_lock_acquire+0x8>)
   4084be:	f000 bb9f 	b.w	408c00 <__retarget_lock_acquire_recursive>
   4084c2:	bf00      	nop
-  4084c4:	2040c8c8 	.word	0x2040c8c8
+  4084c4:	2040c924 	.word	0x2040c924
 
 004084c8 <__sfp_lock_release>:
   4084c8:	4801      	ldr	r0, [pc, #4]	; (4084d0 <__sfp_lock_release+0x8>)
   4084ca:	f000 bb9b 	b.w	408c04 <__retarget_lock_release_recursive>
   4084ce:	bf00      	nop
-  4084d0:	2040c8c8 	.word	0x2040c8c8
+  4084d0:	2040c924 	.word	0x2040c924
 
 004084d4 <__libc_fini_array>:
   4084d4:	b538      	push	{r3, r4, r5, lr}
@@ -19335,7 +19335,7 @@ static inline void stdio_serial_init(volatile void *usart, const usart_serial_op
   409a9e:	6033      	str	r3, [r6, #0]
   409aa0:	bd70      	pop	{r4, r5, r6, pc}
   409aa2:	bf00      	nop
-  409aa4:	2040c8cc 	.word	0x2040c8cc
+  409aa4:	2040c928 	.word	0x2040c928
 
 00409aa8 <__register_exitproc>:
   409aa8:	e92d 43f8 	stmdb	sp!, {r3, r4, r5, r6, r7, r8, r9, lr}
@@ -19465,7 +19465,7 @@ static inline void stdio_serial_init(volatile void *usart, const usart_serial_op
   409be6:	d0fb      	beq.n	409be0 <_close_r+0x14>
   409be8:	602b      	str	r3, [r5, #0]
   409bea:	bd38      	pop	{r3, r4, r5, pc}
-  409bec:	2040c8cc 	.word	0x2040c8cc
+  409bec:	2040c928 	.word	0x2040c928
 
 00409bf0 <_fclose_r>:
   409bf0:	b570      	push	{r4, r5, r6, lr}
@@ -19569,7 +19569,7 @@ static inline void stdio_serial_init(volatile void *usart, const usart_serial_op
   409cd2:	d0fb      	beq.n	409ccc <_fstat_r+0x18>
   409cd4:	602b      	str	r3, [r5, #0]
   409cd6:	bd38      	pop	{r3, r4, r5, pc}
-  409cd8:	2040c8cc 	.word	0x2040c8cc
+  409cd8:	2040c928 	.word	0x2040c928
 
 00409cdc <_isatty_r>:
   409cdc:	b538      	push	{r3, r4, r5, lr}
@@ -19587,7 +19587,7 @@ static inline void stdio_serial_init(volatile void *usart, const usart_serial_op
   409cf6:	d0fb      	beq.n	409cf0 <_isatty_r+0x14>
   409cf8:	602b      	str	r3, [r5, #0]
   409cfa:	bd38      	pop	{r3, r4, r5, pc}
-  409cfc:	2040c8cc 	.word	0x2040c8cc
+  409cfc:	2040c928 	.word	0x2040c928
 
 00409d00 <_lseek_r>:
   409d00:	b570      	push	{r4, r5, r6, lr}
@@ -19609,7 +19609,7 @@ static inline void stdio_serial_init(volatile void *usart, const usart_serial_op
   409d22:	6033      	str	r3, [r6, #0]
   409d24:	bd70      	pop	{r4, r5, r6, pc}
   409d26:	bf00      	nop
-  409d28:	2040c8cc 	.word	0x2040c8cc
+  409d28:	2040c928 	.word	0x2040c928
 
 00409d2c <_read_r>:
   409d2c:	b570      	push	{r4, r5, r6, lr}
@@ -19631,7 +19631,7 @@ static inline void stdio_serial_init(volatile void *usart, const usart_serial_op
   409d4e:	6033      	str	r3, [r6, #0]
   409d50:	bd70      	pop	{r4, r5, r6, pc}
   409d52:	bf00      	nop
-  409d54:	2040c8cc 	.word	0x2040c8cc
+  409d54:	2040c928 	.word	0x2040c928
 
 00409d58 <__aeabi_drsub>:
   409d58:	f081 4100 	eor.w	r1, r1, #2147483648	; 0x80000000
@@ -40321,7 +40321,7 @@ void portable_delay_cycles(unsigned long n)
 2040084c:	0000 0002                                   ....
 
 20400850 <__atexit_recursive_mutex>:
-20400850:	c8a8 2040                                   ..@ 
+20400850:	c904 2040                                   ..@ 
 
 20400854 <__global_locale>:
 20400854:	0043 0000 0000 0000 0000 0000 0000 0000     C...............

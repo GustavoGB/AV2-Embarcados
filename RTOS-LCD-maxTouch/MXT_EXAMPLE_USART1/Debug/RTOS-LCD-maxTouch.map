@@ -133,6 +133,8 @@ __lock___atexit_recursive_mutex
 xSemaphorePot       0x4               src/main.o
 __lock___arc4random_mutex
                     0x1               d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-lock.o)
+global_pwm_channel_led
+                    0x3c              src/main.o
 errno               0x4               d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-reent.o)
 xSemaphorePwm       0x4               src/main.o
 xQueueRegistry      0x40              src/ASF/thirdparty/freertos/freertos-8.2.3/Source/queue.o
@@ -147,6 +149,7 @@ __lock___malloc_recursive_mutex
                     0x1               d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-lock.o)
 pio_capture_enable_flag
                     0x4               src/ASF/sam/drivers/pio/pio.o
+bufferMotor         0x20              src/main.o
 stdio_base          0x4               src/ASF/common/utils/stdio/write.o
 sleepmgr_locks      0x6               src/ASF/common/services/sleepmgr/sam/sleepmgr.o
 g_ili9488_display_opt
@@ -176,6 +179,389 @@ Discarded input sections
  .ARM.exidx     0x00000000        0x8 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/crt0.o
  .ARM.attributes
                 0x00000000       0x1c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/crt0.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .group         0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .text          0x00000000        0x0 src/ASF/sam/drivers/pwm/pwm.o
+ .data          0x00000000        0x0 src/ASF/sam/drivers/pwm/pwm.o
+ .bss           0x00000000        0x0 src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_clocks_generate
+                0x00000000       0x54 src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_init
+                0x00000000       0x44 src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_channel_init
+                0x00000000      0x16e src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_channel_update_period
+                0x00000000       0x1c src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_channel_update_duty
+                0x00000000       0x1c src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_channel_get_counter
+                0x00000000        0xc src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_channel_enable
+                0x00000000        0xa src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_channel_disable
+                0x00000000        0xa src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_channel_get_status
+                0x00000000        0x4 src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_channel_get_interrupt_status
+                0x00000000        0x4 src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_channel_get_interrupt_mask
+                0x00000000        0x4 src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_channel_enable_interrupt
+                0x00000000       0x12 src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_channel_disable_interrupt
+                0x00000000       0x12 src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_channel_update_output
+                0x00000000       0x76 src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_channel_update_dead_time
+                0x00000000       0x14 src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_fault_init
+                0x00000000       0x36 src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_fault_get_status
+                0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_fault_get_input_level
+                0x00000000        0xa src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_fault_clear_status
+                0x00000000        0x4 src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_cmp_init
+                0x00000000       0xa8 src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_cmp_change_setting
+                0x00000000       0xaa src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_cmp_get_period_counter
+                0x00000000        0xe src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_cmp_get_update_counter
+                0x00000000        0xe src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_cmp_enable_interrupt
+                0x00000000       0x22 src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_cmp_disable_interrupt
+                0x00000000       0x22 src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_sync_init
+                0x00000000       0x14 src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_sync_unlock_update
+                0x00000000        0x6 src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_sync_change_period
+                0x00000000        0x8 src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_sync_get_period_counter
+                0x00000000        0xa src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_sync_enable_interrupt
+                0x00000000        0x4 src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_sync_disable_interrupt
+                0x00000000        0x4 src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_enable_protect
+                0x00000000       0x20 src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_disable_protect
+                0x00000000       0x10 src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_get_protect_status
+                0x00000000       0x22 src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_get_interrupt_status
+                0x00000000        0x4 src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_get_interrupt_mask
+                0x00000000        0x4 src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_stepper_motor_init
+                0x00000000       0x20 src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_channel_update_spread
+                0x00000000        0xc src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_channel_update_leading_edge
+                0x00000000       0x28 src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_set_dma_duty
+                0x00000000       0x10 src/ASF/sam/drivers/pwm/pwm.o
+ .text.pwm_set_ext_trigger_mode
+                0x00000000       0x18 src/ASF/sam/drivers/pwm/pwm.o
+ .rodata        0x00000000       0x2c src/ASF/sam/drivers/pwm/pwm.o
+ .bss.cpu_irq_critical_section_counter
+                0x00000000        0x4 src/ASF/sam/drivers/pwm/pwm.o
+ .bss.cpu_irq_prev_interrupt_state
+                0x00000000        0x1 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_info    0x00000000     0x20bc src/ASF/sam/drivers/pwm/pwm.o
+ .debug_abbrev  0x00000000      0x324 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_loc     0x00000000      0xe2b src/ASF/sam/drivers/pwm/pwm.o
+ .debug_aranges
+                0x00000000      0x160 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_ranges  0x00000000      0x150 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x693 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x8da src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x16d src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x6d7 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x76 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x16 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x6da src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x22 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x87 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x51 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0xef src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x6a src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x1df src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x51 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x3b src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x2d src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x26 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0xf9a src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x191 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x2ee src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0xa23 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x1b4 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x35f src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x15a src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000     0x18b3 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x1c src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x6a2 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x27f src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x3ba src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x4f0 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x5cb src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000     0x1527 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000     0x2a40 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000     0x113e src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0xcdb src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x3c6 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0xa0 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x76 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x442 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x64 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x299 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x201 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x280 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x539 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x64f src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x6cc src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x64 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x4c4 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x237 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0xa06 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000     0x14ec src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x40 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x76 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0xdd1 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x88 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x7c src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x52 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x133 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x133 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x133 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x76 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x76 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x2fe src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0xca src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0xca src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0xca src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x13b src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x13b src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x2cd src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0xbe src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x64 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x46 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x64 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0xa6 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x4b7 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x133 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x52 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x2fe src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x76 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0xbe src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x70 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x34 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x9b8 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x70 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x8e src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x5e src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0xfa src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x4c src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x4c src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x16 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0xfa src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x52 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x16 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x52 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x2e src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x1b3 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x1b3 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x1b3 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x1b3 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x1b3 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x1c src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x34 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x22 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x1c src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x5e src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x10 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x1c src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x52 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x52 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x52 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x33e src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000     0x10ab src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x107 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x58 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x35 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x9c src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x16 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x35 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x353 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x10 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x58 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x1f src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x43 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x20 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x187 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x10 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x1c src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x52 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x40 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x10 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x40 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0xd7 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x16 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x18b src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x22 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x16 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x16 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x29 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x73 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000       0x3e src/ASF/sam/drivers/pwm/pwm.o
+ .debug_macro   0x00000000      0x3ca src/ASF/sam/drivers/pwm/pwm.o
+ .debug_line    0x00000000      0xd76 src/ASF/sam/drivers/pwm/pwm.o
+ .debug_str     0x00000000    0x893b6 src/ASF/sam/drivers/pwm/pwm.o
+ .comment       0x00000000       0x5a src/ASF/sam/drivers/pwm/pwm.o
+ .debug_frame   0x00000000      0x31c src/ASF/sam/drivers/pwm/pwm.o
+ .ARM.attributes
+                0x00000000       0x37 src/ASF/sam/drivers/pwm/pwm.o
  .group         0x00000000        0x8 src/ASF/common/components/touch/mxt/mxt_device_1.o
  .group         0x00000000        0x8 src/ASF/common/components/touch/mxt/mxt_device_1.o
  .group         0x00000000        0x8 src/ASF/common/components/touch/mxt/mxt_device_1.o
@@ -351,6 +737,146 @@ Discarded input sections
                 0x00000000        0x4 src/ASF/common/components/touch/mxt/mxt_device_1.o
  .bss.cpu_irq_prev_interrupt_state
                 0x00000000        0x1 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x8da src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x6d7 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x16d src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x76 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x16 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x6da src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x22 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x87 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x51 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0xef src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x6a src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x1df src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x51 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x3b src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x2d src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x26 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0xf9a src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x191 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x2ee src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0xa23 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x1b4 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x35f src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x15a src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000     0x18b3 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x1c src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x6a2 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x27f src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x3ba src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x4f0 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x5cb src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000     0x1527 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000     0x2a40 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000     0x113e src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0xcdb src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x3c6 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0xa0 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x76 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x442 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x64 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x299 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x201 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x280 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x539 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x64f src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x6cc src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x64 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x4c4 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x237 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0xa06 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000     0x14ec src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x40 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x76 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0xdd1 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x88 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x7c src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x52 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x133 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x133 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x133 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x76 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x76 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x2fe src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0xca src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0xca src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0xca src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x13b src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x13b src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x2cd src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0xbe src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x64 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x46 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x64 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0xa6 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x4b7 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x133 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x52 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x2fe src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x76 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0xbe src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x70 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x34 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x9b8 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x70 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x8e src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x5e src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0xfa src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x4c src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x4c src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x16 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0xfa src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x52 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x16 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x52 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x2e src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x1b3 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x1b3 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x1b3 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x1b3 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x1b3 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x1c src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x34 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x22 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x1c src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x5e src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x10 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x1c src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x52 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x52 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x52 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x33e src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000     0x10ab src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x107 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x58 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x35 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x9c src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x16 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x35 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x353 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x10 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x58 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x1f src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x43 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x20 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x187 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x10 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x1c src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x52 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x40 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x10 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x40 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0xd7 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x16 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x18b src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x22 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x16 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x16 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x29 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x73 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000       0x3e src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000000      0x3ca src/ASF/common/components/touch/mxt/mxt_device_1.o
  .group         0x00000000        0x8 src/ASF/common/services/clock/same70/sysclk.o
  .group         0x00000000        0x8 src/ASF/common/services/clock/same70/sysclk.o
  .group         0x00000000        0x8 src/ASF/common/services/clock/same70/sysclk.o
@@ -10271,18 +10797,20 @@ Discarded input sections
  .group         0x00000000        0x8 src/main.o
  .group         0x00000000        0x8 src/main.o
  .group         0x00000000        0x8 src/main.o
+ .group         0x00000000        0x8 src/main.o
  .text          0x00000000        0x0 src/main.o
  .data          0x00000000        0x0 src/main.o
  .bss           0x00000000        0x0 src/main.o
+ .text.pwm_callback
+                0x00000000       0x24 src/main.o
  .text.vApplicationIdleHook
                 0x00000000       0x10 src/main.o
+ .text.io_init  0x00000000       0xa4 src/main.o
  .text.convert_axis_system_x
                 0x00000000        0xe src/main.o
  .text.convert_axis_system_y
                 0x00000000        0xa src/main.o
  .text.pot_callback
-                0x00000000       0x24 src/main.o
- .text.pwm_callback
                 0x00000000       0x24 src/main.o
  .bss.cpu_irq_critical_section_counter
                 0x00000000        0x4 src/main.o
@@ -10779,6 +11307,7 @@ Linker script and memory map
 LOAD d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/crti.o
 LOAD d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/crtbegin.o
 LOAD d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/crt0.o
+LOAD src/ASF/sam/drivers/pwm/pwm.o
 LOAD src/ASF/common/components/touch/mxt/mxt_device_1.o
 LOAD src/ASF/common/services/clock/same70/sysclk.o
 LOAD src/ASF/common/services/delay/sam/cycle_counter.o
@@ -12103,7 +12632,7 @@ LOAD d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/g
                 0x204009c0                . = ALIGN (0x4)
                 0x204009c0                _erelocate = .
 
-.bss            0x204009c0     0xbf10 load address 0x0045616c
+.bss            0x204009c0     0xbf6c load address 0x0045616c
                 0x204009c0                . = ALIGN (0x4)
                 0x204009c0                _sbss = .
                 0x204009c0                _szero = .
@@ -12208,47 +12737,50 @@ LOAD d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/g
                 0x2040c7a8                afec_callback_pointer
  COMMON         0x2040c828       0x40 src/ASF/thirdparty/freertos/freertos-8.2.3/Source/queue.o
                 0x2040c828                xQueueRegistry
- COMMON         0x2040c868       0x40 src/main.o
+ COMMON         0x2040c868       0x9c src/main.o
                 0x2040c868                xSemaphorePot
-                0x2040c86c                xSemaphorePwm
-                0x2040c870                potencio_ul_value
-                0x2040c874                g_ili9488_display_opt
-                0x2040c884                bufferPotencia
-                0x2040c8a4                xQueueTouch
- COMMON         0x2040c8a8       0x21 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-lock.o)
-                0x2040c8a8                __lock___atexit_recursive_mutex
-                0x2040c8ac                __lock___arc4random_mutex
-                0x2040c8b0                __lock___env_recursive_mutex
-                0x2040c8b4                __lock___sinit_recursive_mutex
-                0x2040c8b8                __lock___malloc_recursive_mutex
-                0x2040c8bc                __lock___at_quick_exit_mutex
-                0x2040c8c0                __lock___dd_hash_mutex
-                0x2040c8c4                __lock___tz_mutex
-                0x2040c8c8                __lock___sfp_recursive_mutex
- *fill*         0x2040c8c9        0x3 
- COMMON         0x2040c8cc        0x4 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-reent.o)
-                0x2040c8cc                errno
-                0x2040c8d0                . = ALIGN (0x4)
-                0x2040c8d0                _ebss = .
-                0x2040c8d0                _ezero = .
+                0x2040c86c                global_pwm_channel_led
+                0x2040c8a8                xSemaphorePwm
+                0x2040c8ac                potencio_ul_value
+                0x2040c8b0                bufferMotor
+                0x2040c8d0                g_ili9488_display_opt
+                0x2040c8e0                bufferPotencia
+                0x2040c900                xQueueTouch
+ COMMON         0x2040c904       0x21 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-lock.o)
+                0x2040c904                __lock___atexit_recursive_mutex
+                0x2040c908                __lock___arc4random_mutex
+                0x2040c90c                __lock___env_recursive_mutex
+                0x2040c910                __lock___sinit_recursive_mutex
+                0x2040c914                __lock___malloc_recursive_mutex
+                0x2040c918                __lock___at_quick_exit_mutex
+                0x2040c91c                __lock___dd_hash_mutex
+                0x2040c920                __lock___tz_mutex
+                0x2040c924                __lock___sfp_recursive_mutex
+ *fill*         0x2040c925        0x3 
+ COMMON         0x2040c928        0x4 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-reent.o)
+                0x2040c928                errno
+                0x2040c92c                . = ALIGN (0x4)
+                0x2040c92c                _ebss = .
+                0x2040c92c                _ezero = .
 
-.stack          0x2040c8d0     0x2000 load address 0x0046207c
-                0x2040c8d0                . = ALIGN (0x8)
-                0x2040c8d0                _sstack = .
-                0x2040e8d0                . = (. + STACK_SIZE)
- *fill*         0x2040c8d0     0x2000 
-                0x2040e8d0                . = ALIGN (0x8)
-                0x2040e8d0                _estack = .
+.stack          0x2040c92c     0x2004 load address 0x004620d8
+                0x2040c930                . = ALIGN (0x8)
+ *fill*         0x2040c92c        0x4 
+                0x2040c930                _sstack = .
+                0x2040e930                . = (. + STACK_SIZE)
+ *fill*         0x2040c930     0x2000 
+                0x2040e930                . = ALIGN (0x8)
+                0x2040e930                _estack = .
 
-.heap           0x2040e8d0      0x200 load address 0x0046407c
-                0x2040e8d0                . = ALIGN (0x8)
-                0x2040e8d0                _sheap = .
-                0x2040ead0                . = (. + HEAP_SIZE)
- *fill*         0x2040e8d0      0x200 
-                0x2040ead0                . = ALIGN (0x8)
-                0x2040ead0                _eheap = .
-                0x2040ead0                . = ALIGN (0x4)
-                0x2040ead0                _end = .
+.heap           0x2040e930      0x200 load address 0x004640dc
+                0x2040e930                . = ALIGN (0x8)
+                0x2040e930                _sheap = .
+                0x2040eb30                . = (. + HEAP_SIZE)
+ *fill*         0x2040e930      0x200 
+                0x2040eb30                . = ALIGN (0x8)
+                0x2040eb30                _eheap = .
+                0x2040eb30                . = ALIGN (0x4)
+                0x2040eb30                _end = .
                 0x2045ffff                _ram_end_ = ((ORIGIN (ram) + LENGTH (ram)) - 0x1)
 OUTPUT(RTOS-LCD-maxTouch.elf elf32-littlearm)
 
@@ -12466,7 +12998,7 @@ OUTPUT(RTOS-LCD-maxTouch.elf elf32-littlearm)
  .comment       0x00000059       0x5a src/ASF/thirdparty/freertos/freertos-8.2.3/Source/timers.o
  .comment       0x00000059       0x5a src/main.o
 
-.debug_info     0x00000000    0x2b2ef
+.debug_info     0x00000000    0x2c3b2
  .debug_info    0x00000000     0x240d src/ASF/common/components/touch/mxt/mxt_device_1.o
  .debug_info    0x0000240d     0x12a4 src/ASF/common/services/clock/same70/sysclk.o
  .debug_info    0x000036b1      0xa45 src/ASF/common/services/delay/sam/cycle_counter.o
@@ -12494,9 +13026,9 @@ OUTPUT(RTOS-LCD-maxTouch.elf elf32-littlearm)
  .debug_info    0x0001fbeb     0x26ec src/ASF/thirdparty/freertos/freertos-8.2.3/Source/queue.o
  .debug_info    0x000222d7     0x34b4 src/ASF/thirdparty/freertos/freertos-8.2.3/Source/tasks.o
  .debug_info    0x0002578b     0x1b3e src/ASF/thirdparty/freertos/freertos-8.2.3/Source/timers.o
- .debug_info    0x000272c9     0x4026 src/main.o
+ .debug_info    0x000272c9     0x50e9 src/main.o
 
-.debug_abbrev   0x00000000     0x5941
+.debug_abbrev   0x00000000     0x5979
  .debug_abbrev  0x00000000      0x44d src/ASF/common/components/touch/mxt/mxt_device_1.o
  .debug_abbrev  0x0000044d      0x31f src/ASF/common/services/clock/same70/sysclk.o
  .debug_abbrev  0x0000076c      0x1b3 src/ASF/common/services/delay/sam/cycle_counter.o
@@ -12524,9 +13056,9 @@ OUTPUT(RTOS-LCD-maxTouch.elf elf32-littlearm)
  .debug_abbrev  0x000047eb      0x399 src/ASF/thirdparty/freertos/freertos-8.2.3/Source/queue.o
  .debug_abbrev  0x00004b84      0x48d src/ASF/thirdparty/freertos/freertos-8.2.3/Source/tasks.o
  .debug_abbrev  0x00005011      0x3ce src/ASF/thirdparty/freertos/freertos-8.2.3/Source/timers.o
- .debug_abbrev  0x000053df      0x562 src/main.o
+ .debug_abbrev  0x000053df      0x59a src/main.o
 
-.debug_loc      0x00000000     0xde1e
+.debug_loc      0x00000000     0xdece
  .debug_loc     0x00000000      0xfd8 src/ASF/common/components/touch/mxt/mxt_device_1.o
  .debug_loc     0x00000fd8      0x183 src/ASF/common/services/clock/same70/sysclk.o
  .debug_loc     0x0000115b      0xab0 src/ASF/common/services/spi/sam_spi/spi_master.o
@@ -12550,9 +13082,9 @@ OUTPUT(RTOS-LCD-maxTouch.elf elf32-littlearm)
  .debug_loc     0x00008c19     0x173f src/ASF/thirdparty/freertos/freertos-8.2.3/Source/queue.o
  .debug_loc     0x0000a358     0x20bd src/ASF/thirdparty/freertos/freertos-8.2.3/Source/tasks.o
  .debug_loc     0x0000c415      0xd26 src/ASF/thirdparty/freertos/freertos-8.2.3/Source/timers.o
- .debug_loc     0x0000d13b      0xce3 src/main.o
+ .debug_loc     0x0000d13b      0xd93 src/main.o
 
-.debug_aranges  0x00000000     0x12c0
+.debug_aranges  0x00000000     0x12c8
  .debug_aranges
                 0x00000000       0x90 src/ASF/common/components/touch/mxt/mxt_device_1.o
  .debug_aranges
@@ -12608,9 +13140,9 @@ OUTPUT(RTOS-LCD-maxTouch.elf elf32-littlearm)
  .debug_aranges
                 0x00001190       0x80 src/ASF/thirdparty/freertos/freertos-8.2.3/Source/timers.o
  .debug_aranges
-                0x00001210       0xb0 src/main.o
+                0x00001210       0xb8 src/main.o
 
-.debug_ranges   0x00000000     0x1568
+.debug_ranges   0x00000000     0x1570
  .debug_ranges  0x00000000      0x148 src/ASF/common/components/touch/mxt/mxt_device_1.o
  .debug_ranges  0x00000148       0x30 src/ASF/common/services/clock/same70/sysclk.o
  .debug_ranges  0x00000178       0x10 src/ASF/common/services/delay/sam/cycle_counter.o
@@ -12637,237 +13169,98 @@ OUTPUT(RTOS-LCD-maxTouch.elf elf32-littlearm)
  .debug_ranges  0x00000fc8      0x110 src/ASF/thirdparty/freertos/freertos-8.2.3/Source/queue.o
  .debug_ranges  0x000010d8      0x2e8 src/ASF/thirdparty/freertos/freertos-8.2.3/Source/tasks.o
  .debug_ranges  0x000013c0       0xc0 src/ASF/thirdparty/freertos/freertos-8.2.3/Source/timers.o
- .debug_ranges  0x00001480       0xe8 src/main.o
+ .debug_ranges  0x00001480       0xf0 src/main.o
 
-.debug_macro    0x00000000    0x26700
+.debug_macro    0x00000000     0xe367
  .debug_macro   0x00000000      0x771 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00000771      0x8da src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x0000104b      0x6d7 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00001722      0x16d src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x0000188f       0x76 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00001905       0x16 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x0000191b      0x6da src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00001ff5       0x22 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00002017       0x87 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x0000209e       0x51 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x000020ef       0xef src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x000021de       0x6a src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00002248      0x1df src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00002427       0x51 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00002478       0x3b src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x000024b3       0x2d src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x000024e0       0x26 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00002506      0xf9a src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x000034a0      0x191 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00003631      0x2ee src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x0000391f      0xa23 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00004342      0x1b4 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x000044f6      0x35f src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00004855      0x15a src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x000049af     0x18b3 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00006262       0x1c src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x0000627e      0x6a2 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00006920      0x27f src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00006b9f      0x3ba src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00006f59      0x4f0 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00007449      0x5cb src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00007a14     0x1527 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00008f3b     0x2a40 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x0000b97b     0x113e src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x0000cab9      0xcdb src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x0000d794      0x3c6 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x0000db5a       0xa0 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x0000dbfa       0x76 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x0000dc70      0x442 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x0000e0b2       0x64 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x0000e116      0x299 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x0000e3af      0x201 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x0000e5b0      0x280 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x0000e830      0x539 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x0000ed69      0x64f src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x0000f3b8      0x6cc src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x0000fa84       0x64 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x0000fae8      0x4c4 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x0000ffac      0x237 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x000101e3      0xa06 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00010be9     0x14ec src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x000120d5       0x40 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00012115       0x76 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x0001218b      0xdd1 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00012f5c       0x88 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00012fe4       0x7c src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00013060       0x52 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x000130b2      0x133 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x000131e5      0x133 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00013318      0x133 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x0001344b       0x76 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x000134c1       0x76 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00013537      0x2fe src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00013835       0xca src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x000138ff       0xca src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x000139c9       0xca src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00013a93      0x13b src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00013bce      0x13b src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00013d09      0x2cd src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00013fd6       0xbe src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00014094       0x64 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x000140f8       0x46 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x0001413e       0x64 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x000141a2       0xa6 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00014248      0x4b7 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x000146ff      0x133 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00014832       0x52 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00014884      0x2fe src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00014b82       0x76 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00014bf8       0xbe src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00014cb6       0x70 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00014d26       0x34 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00014d5a      0x9b8 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00015712       0x70 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00015782       0x8e src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00015810       0x5e src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x0001586e       0xfa src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00015968       0x4c src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x000159b4       0x4c src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00015a00       0x16 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00015a16       0xfa src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00015b10       0x52 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00015b62       0x16 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00015b78       0x52 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00015bca       0x2e src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00015bf8      0x1b3 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00015dab      0x1b3 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00015f5e      0x1b3 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00016111      0x1b3 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x000162c4      0x1b3 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00016477       0x1c src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00016493       0x34 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x000164c7       0x22 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x000164e9       0x1c src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00016505       0x5e src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00016563       0x10 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00016573       0x1c src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x0001658f       0x52 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x000165e1       0x52 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00016633       0x52 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00016685      0x33e src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x000169c3     0x10ab src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00017a6e      0x107 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00017b75       0x58 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00017bcd       0x35 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00017c02       0x9c src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00017c9e       0x16 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00017cb4       0x35 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00017ce9      0x353 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x0001803c       0x10 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x0001804c       0x58 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x000180a4       0x1f src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x000180c3       0x43 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00018106       0x20 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00018126      0x187 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x000182ad       0x10 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x000182bd       0x1c src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x000182d9       0x52 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x0001832b       0x40 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x0001836b       0x10 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x0001837b       0x40 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x000183bb       0xd7 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00018492       0x16 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x000184a8      0x18b src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00018633       0x22 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00018655       0x16 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x0001866b       0x16 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00018681       0x29 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x000186aa       0x73 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x0001871d       0x3e src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x0001875b      0x3ca src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00018b25       0x4c src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00018b71       0x3a src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00018bab      0x2c3 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00018e6e      0xa91 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x000198ff       0x70 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x0001996f       0x64 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x000199d3       0x5f src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00019a32       0xac src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00019ade       0x10 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00019aee       0x88 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00019b76       0x10 src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00019b86       0x7d src/ASF/common/components/touch/mxt/mxt_device_1.o
- .debug_macro   0x00019c03      0x6f2 src/ASF/common/services/clock/same70/sysclk.o
- .debug_macro   0x0001a2f5      0x2bd src/ASF/common/services/clock/same70/sysclk.o
- .debug_macro   0x0001a5b2      0x686 src/ASF/common/services/delay/sam/cycle_counter.o
- .debug_macro   0x0001ac38       0x22 src/ASF/common/services/delay/sam/cycle_counter.o
- .debug_macro   0x0001ac5a      0x6a0 src/ASF/common/services/sleepmgr/sam/sleepmgr.o
- .debug_macro   0x0001b2fa       0x10 src/ASF/common/services/sleepmgr/sam/sleepmgr.o
- .debug_macro   0x0001b30a       0x34 src/ASF/common/services/sleepmgr/sam/sleepmgr.o
- .debug_macro   0x0001b33e      0x733 src/ASF/common/services/spi/sam_spi/spi_master.o
- .debug_macro   0x0001ba71       0x16 src/ASF/common/services/spi/sam_spi/spi_master.o
- .debug_macro   0x0001ba87       0x28 src/ASF/common/services/spi/sam_spi/spi_master.o
- .debug_macro   0x0001baaf       0x2e src/ASF/common/services/spi/sam_spi/spi_master.o
- .debug_macro   0x0001badd      0x676 src/ASF/common/utils/interrupt/interrupt_sam_nvic.o
- .debug_macro   0x0001c153      0x676 src/ASF/common/utils/stdio/read.o
- .debug_macro   0x0001c7c9      0x676 src/ASF/common/utils/stdio/write.o
- .debug_macro   0x0001ce3f      0x72e src/ASF/sam/boards/same70_xplained/init.o
- .debug_macro   0x0001d56d       0x28 src/ASF/sam/boards/same70_xplained/init.o
- .debug_macro   0x0001d595       0x82 src/ASF/sam/boards/same70_xplained/init.o
- .debug_macro   0x0001d617       0x94 src/ASF/sam/boards/same70_xplained/init.o
- .debug_macro   0x0001d6ab      0x772 src/ASF/sam/components/display/ili9488/ili9488.o
- .debug_macro   0x0001de1d       0x16 src/ASF/sam/components/display/ili9488/ili9488.o
- .debug_macro   0x0001de33      0x41e src/ASF/sam/components/display/ili9488/ili9488.o
- .debug_macro   0x0001e251       0x16 src/ASF/sam/components/display/ili9488/ili9488.o
- .debug_macro   0x0001e267       0x16 src/ASF/sam/components/display/ili9488/ili9488.o
- .debug_macro   0x0001e27d      0x74f src/ASF/sam/drivers/afec/afec.o
- .debug_macro   0x0001e9cc       0x12 src/ASF/sam/drivers/afec/afec.o
- .debug_macro   0x0001e9de      0x68c src/ASF/sam/drivers/pio/pio.o
- .debug_macro   0x0001f06a       0x8e src/ASF/sam/drivers/pio/pio.o
- .debug_macro   0x0001f0f8      0x697 src/ASF/sam/drivers/pio/pio_handler.o
- .debug_macro   0x0001f78f      0x68c src/ASF/sam/drivers/pmc/pmc.o
- .debug_macro   0x0001fe1b       0x6a src/ASF/sam/drivers/pmc/pmc.o
- .debug_macro   0x0001fe85      0x6fb src/ASF/sam/drivers/spi/spi.o
- .debug_macro   0x00020580       0x10 src/ASF/sam/drivers/spi/spi.o
- .debug_macro   0x00020590      0x6aa src/ASF/sam/drivers/twihs/twihs.o
- .debug_macro   0x00020c3a       0x46 src/ASF/sam/drivers/twihs/twihs.o
- .debug_macro   0x00020c80      0x686 src/ASF/sam/drivers/uart/uart.o
- .debug_macro   0x00021306       0x16 src/ASF/sam/drivers/uart/uart.o
- .debug_macro   0x0002131c      0x6bc src/ASF/sam/drivers/usart/usart.o
- .debug_macro   0x000219d8       0x28 src/ASF/sam/drivers/usart/usart.o
- .debug_macro   0x00021a00      0x685 src/ASF/sam/utils/cmsis/same70/source/templates/gcc/startup_same70.o
- .debug_macro   0x00022085       0x10 src/ASF/sam/utils/cmsis/same70/source/templates/gcc/startup_same70.o
- .debug_macro   0x00022095      0x473 src/ASF/sam/utils/cmsis/same70/source/templates/system_same70.o
- .debug_macro   0x00022508      0x1d6 src/ASF/sam/utils/syscalls/gcc/syscalls.o
- .debug_macro   0x000226de       0x52 src/ASF/sam/utils/syscalls/gcc/syscalls.o
- .debug_macro   0x00022730       0x8d src/ASF/sam/utils/syscalls/gcc/syscalls.o
- .debug_macro   0x000227bd       0x57 src/ASF/sam/utils/syscalls/gcc/syscalls.o
- .debug_macro   0x00022814       0x97 src/ASF/sam/utils/syscalls/gcc/syscalls.o
- .debug_macro   0x000228ab       0xf6 src/ASF/sam/utils/syscalls/gcc/syscalls.o
- .debug_macro   0x000229a1       0x4c src/ASF/sam/utils/syscalls/gcc/syscalls.o
- .debug_macro   0x000229ed       0x16 src/ASF/sam/utils/syscalls/gcc/syscalls.o
- .debug_macro   0x00022a03       0x10 src/ASF/sam/utils/syscalls/gcc/syscalls.o
- .debug_macro   0x00022a13       0x10 src/ASF/sam/utils/syscalls/gcc/syscalls.o
- .debug_macro   0x00022a23       0x35 src/ASF/sam/utils/syscalls/gcc/syscalls.o
- .debug_macro   0x00022a58      0x122 src/ASF/sam/utils/syscalls/gcc/syscalls.o
- .debug_macro   0x00022b7a      0x6e7 src/ASF/thirdparty/freertos/freertos-8.2.3/Source/list.o
- .debug_macro   0x00023261      0x7b6 src/ASF/thirdparty/freertos/freertos-8.2.3/Source/portable/GCC/ARM_CM7/r0p1/port.o
- .debug_macro   0x00023a17      0x709 src/ASF/thirdparty/freertos/freertos-8.2.3/Source/portable/MemMang/heap_1.o
- .debug_macro   0x00024120      0x768 src/ASF/thirdparty/freertos/freertos-8.2.3/Source/queue.o
- .debug_macro   0x00024888       0xb0 src/ASF/thirdparty/freertos/freertos-8.2.3/Source/queue.o
- .debug_macro   0x00024938      0x7a6 src/ASF/thirdparty/freertos/freertos-8.2.3/Source/tasks.o
- .debug_macro   0x000250de       0x10 src/ASF/thirdparty/freertos/freertos-8.2.3/Source/tasks.o
- .debug_macro   0x000250ee      0x727 src/ASF/thirdparty/freertos/freertos-8.2.3/Source/timers.o
- .debug_macro   0x00025815      0xa5d src/main.o
- .debug_macro   0x00026272       0x28 src/main.o
- .debug_macro   0x0002629a       0x22 src/main.o
- .debug_macro   0x000262bc      0x149 src/main.o
- .debug_macro   0x00026405       0x7f src/main.o
- .debug_macro   0x00026484       0x40 src/main.o
- .debug_macro   0x000264c4      0x1c8 src/main.o
- .debug_macro   0x0002668c       0x16 src/main.o
- .debug_macro   0x000266a2       0x1c src/main.o
- .debug_macro   0x000266be       0x16 src/main.o
- .debug_macro   0x000266d4       0x16 src/main.o
- .debug_macro   0x000266ea       0x16 src/main.o
+ .debug_macro   0x00000771       0x4c src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x000007bd       0x3a src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x000007f7      0x2c3 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x00000aba      0xa91 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x0000154b       0x70 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x000015bb       0x64 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x0000161f       0x5f src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x0000167e       0xac src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x0000172a       0x10 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x0000173a       0x88 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x000017c2       0x10 src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x000017d2       0x7d src/ASF/common/components/touch/mxt/mxt_device_1.o
+ .debug_macro   0x0000184f      0x6f2 src/ASF/common/services/clock/same70/sysclk.o
+ .debug_macro   0x00001f41      0x2bd src/ASF/common/services/clock/same70/sysclk.o
+ .debug_macro   0x000021fe      0x686 src/ASF/common/services/delay/sam/cycle_counter.o
+ .debug_macro   0x00002884       0x22 src/ASF/common/services/delay/sam/cycle_counter.o
+ .debug_macro   0x000028a6      0x6a0 src/ASF/common/services/sleepmgr/sam/sleepmgr.o
+ .debug_macro   0x00002f46       0x10 src/ASF/common/services/sleepmgr/sam/sleepmgr.o
+ .debug_macro   0x00002f56       0x34 src/ASF/common/services/sleepmgr/sam/sleepmgr.o
+ .debug_macro   0x00002f8a      0x733 src/ASF/common/services/spi/sam_spi/spi_master.o
+ .debug_macro   0x000036bd       0x16 src/ASF/common/services/spi/sam_spi/spi_master.o
+ .debug_macro   0x000036d3       0x28 src/ASF/common/services/spi/sam_spi/spi_master.o
+ .debug_macro   0x000036fb       0x2e src/ASF/common/services/spi/sam_spi/spi_master.o
+ .debug_macro   0x00003729      0x676 src/ASF/common/utils/interrupt/interrupt_sam_nvic.o
+ .debug_macro   0x00003d9f      0x676 src/ASF/common/utils/stdio/read.o
+ .debug_macro   0x00004415      0x676 src/ASF/common/utils/stdio/write.o
+ .debug_macro   0x00004a8b      0x72e src/ASF/sam/boards/same70_xplained/init.o
+ .debug_macro   0x000051b9       0x28 src/ASF/sam/boards/same70_xplained/init.o
+ .debug_macro   0x000051e1       0x82 src/ASF/sam/boards/same70_xplained/init.o
+ .debug_macro   0x00005263       0x94 src/ASF/sam/boards/same70_xplained/init.o
+ .debug_macro   0x000052f7      0x772 src/ASF/sam/components/display/ili9488/ili9488.o
+ .debug_macro   0x00005a69       0x16 src/ASF/sam/components/display/ili9488/ili9488.o
+ .debug_macro   0x00005a7f      0x41e src/ASF/sam/components/display/ili9488/ili9488.o
+ .debug_macro   0x00005e9d       0x16 src/ASF/sam/components/display/ili9488/ili9488.o
+ .debug_macro   0x00005eb3       0x16 src/ASF/sam/components/display/ili9488/ili9488.o
+ .debug_macro   0x00005ec9      0x74f src/ASF/sam/drivers/afec/afec.o
+ .debug_macro   0x00006618       0x12 src/ASF/sam/drivers/afec/afec.o
+ .debug_macro   0x0000662a      0x68c src/ASF/sam/drivers/pio/pio.o
+ .debug_macro   0x00006cb6       0x8e src/ASF/sam/drivers/pio/pio.o
+ .debug_macro   0x00006d44      0x697 src/ASF/sam/drivers/pio/pio_handler.o
+ .debug_macro   0x000073db      0x68c src/ASF/sam/drivers/pmc/pmc.o
+ .debug_macro   0x00007a67       0x6a src/ASF/sam/drivers/pmc/pmc.o
+ .debug_macro   0x00007ad1      0x6fb src/ASF/sam/drivers/spi/spi.o
+ .debug_macro   0x000081cc       0x10 src/ASF/sam/drivers/spi/spi.o
+ .debug_macro   0x000081dc      0x6aa src/ASF/sam/drivers/twihs/twihs.o
+ .debug_macro   0x00008886       0x46 src/ASF/sam/drivers/twihs/twihs.o
+ .debug_macro   0x000088cc      0x686 src/ASF/sam/drivers/uart/uart.o
+ .debug_macro   0x00008f52       0x16 src/ASF/sam/drivers/uart/uart.o
+ .debug_macro   0x00008f68      0x6bc src/ASF/sam/drivers/usart/usart.o
+ .debug_macro   0x00009624       0x28 src/ASF/sam/drivers/usart/usart.o
+ .debug_macro   0x0000964c      0x685 src/ASF/sam/utils/cmsis/same70/source/templates/gcc/startup_same70.o
+ .debug_macro   0x00009cd1       0x10 src/ASF/sam/utils/cmsis/same70/source/templates/gcc/startup_same70.o
+ .debug_macro   0x00009ce1      0x473 src/ASF/sam/utils/cmsis/same70/source/templates/system_same70.o
+ .debug_macro   0x0000a154      0x1d6 src/ASF/sam/utils/syscalls/gcc/syscalls.o
+ .debug_macro   0x0000a32a       0x52 src/ASF/sam/utils/syscalls/gcc/syscalls.o
+ .debug_macro   0x0000a37c       0x8d src/ASF/sam/utils/syscalls/gcc/syscalls.o
+ .debug_macro   0x0000a409       0x57 src/ASF/sam/utils/syscalls/gcc/syscalls.o
+ .debug_macro   0x0000a460       0x97 src/ASF/sam/utils/syscalls/gcc/syscalls.o
+ .debug_macro   0x0000a4f7       0xf6 src/ASF/sam/utils/syscalls/gcc/syscalls.o
+ .debug_macro   0x0000a5ed       0x4c src/ASF/sam/utils/syscalls/gcc/syscalls.o
+ .debug_macro   0x0000a639       0x16 src/ASF/sam/utils/syscalls/gcc/syscalls.o
+ .debug_macro   0x0000a64f       0x10 src/ASF/sam/utils/syscalls/gcc/syscalls.o
+ .debug_macro   0x0000a65f       0x10 src/ASF/sam/utils/syscalls/gcc/syscalls.o
+ .debug_macro   0x0000a66f       0x35 src/ASF/sam/utils/syscalls/gcc/syscalls.o
+ .debug_macro   0x0000a6a4      0x122 src/ASF/sam/utils/syscalls/gcc/syscalls.o
+ .debug_macro   0x0000a7c6      0x6e7 src/ASF/thirdparty/freertos/freertos-8.2.3/Source/list.o
+ .debug_macro   0x0000aead      0x7b6 src/ASF/thirdparty/freertos/freertos-8.2.3/Source/portable/GCC/ARM_CM7/r0p1/port.o
+ .debug_macro   0x0000b663      0x709 src/ASF/thirdparty/freertos/freertos-8.2.3/Source/portable/MemMang/heap_1.o
+ .debug_macro   0x0000bd6c      0x768 src/ASF/thirdparty/freertos/freertos-8.2.3/Source/queue.o
+ .debug_macro   0x0000c4d4       0xb0 src/ASF/thirdparty/freertos/freertos-8.2.3/Source/queue.o
+ .debug_macro   0x0000c584      0x7a6 src/ASF/thirdparty/freertos/freertos-8.2.3/Source/tasks.o
+ .debug_macro   0x0000cd2a       0x10 src/ASF/thirdparty/freertos/freertos-8.2.3/Source/tasks.o
+ .debug_macro   0x0000cd3a      0x727 src/ASF/thirdparty/freertos/freertos-8.2.3/Source/timers.o
+ .debug_macro   0x0000d461      0xa68 src/main.o
+ .debug_macro   0x0000dec9       0x28 src/main.o
+ .debug_macro   0x0000def1       0x22 src/main.o
+ .debug_macro   0x0000df13      0x149 src/main.o
+ .debug_macro   0x0000e05c       0x7f src/main.o
+ .debug_macro   0x0000e0db       0x40 src/main.o
+ .debug_macro   0x0000e11b      0x1c8 src/main.o
+ .debug_macro   0x0000e2e3       0x10 src/main.o
+ .debug_macro   0x0000e2f3       0x16 src/main.o
+ .debug_macro   0x0000e309       0x1c src/main.o
+ .debug_macro   0x0000e325       0x16 src/main.o
+ .debug_macro   0x0000e33b       0x16 src/main.o
+ .debug_macro   0x0000e351       0x16 src/main.o
 
-.debug_line     0x00000000    0x166bb
+.debug_line     0x00000000    0x1670f
  .debug_line    0x00000000      0xe6e src/ASF/common/components/touch/mxt/mxt_device_1.o
  .debug_line    0x00000e6e      0xb4d src/ASF/common/services/clock/same70/sysclk.o
  .debug_line    0x000019bb      0x9eb src/ASF/common/services/delay/sam/cycle_counter.o
@@ -12895,9 +13288,9 @@ OUTPUT(RTOS-LCD-maxTouch.elf elf32-littlearm)
  .debug_line    0x00011ccc     0x11e8 src/ASF/thirdparty/freertos/freertos-8.2.3/Source/queue.o
  .debug_line    0x00012eb4     0x156c src/ASF/thirdparty/freertos/freertos-8.2.3/Source/tasks.o
  .debug_line    0x00014420      0xdad src/ASF/thirdparty/freertos/freertos-8.2.3/Source/timers.o
- .debug_line    0x000151cd     0x14ee src/main.o
+ .debug_line    0x000151cd     0x1542 src/main.o
 
-.debug_str      0x00000000    0x9ebe8
+.debug_str      0x00000000    0x9f0db
  .debug_str     0x00000000    0x8d1eb src/ASF/common/components/touch/mxt/mxt_device_1.o
                               0x8da1c (size before relaxing)
  .debug_str     0x0008d1eb      0x4c3 src/ASF/common/services/clock/same70/sysclk.o
@@ -12952,10 +13345,10 @@ OUTPUT(RTOS-LCD-maxTouch.elf elf32-littlearm)
                               0x91283 (size before relaxing)
  .debug_str     0x0009b806      0x483 src/ASF/thirdparty/freertos/freertos-8.2.3/Source/timers.o
                               0x90d0a (size before relaxing)
- .debug_str     0x0009bc89     0x2f5f src/main.o
-                              0x97e1c (size before relaxing)
+ .debug_str     0x0009bc89     0x3452 src/main.o
+                              0x98b4f (size before relaxing)
 
-.debug_frame    0x00000000     0x4268
+.debug_frame    0x00000000     0x428c
  .debug_frame   0x00000000      0x1d4 src/ASF/common/components/touch/mxt/mxt_device_1.o
  .debug_frame   0x000001d4       0x88 src/ASF/common/services/clock/same70/sysclk.o
  .debug_frame   0x0000025c       0x20 src/ASF/common/services/delay/sam/cycle_counter.o
@@ -12982,60 +13375,60 @@ OUTPUT(RTOS-LCD-maxTouch.elf elf32-littlearm)
  .debug_frame   0x000021c0      0x3c8 src/ASF/thirdparty/freertos/freertos-8.2.3/Source/queue.o
  .debug_frame   0x00002588      0x550 src/ASF/thirdparty/freertos/freertos-8.2.3/Source/tasks.o
  .debug_frame   0x00002ad8      0x1ac src/ASF/thirdparty/freertos/freertos-8.2.3/Source/timers.o
- .debug_frame   0x00002c84      0x224 src/main.o
- .debug_frame   0x00002ea8       0x2c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-init.o)
- .debug_frame   0x00002ed4       0x74 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-iprintf.o)
- .debug_frame   0x00002f48       0x30 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-malloc.o)
- .debug_frame   0x00002f78       0x58 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-mallocr.o)
- .debug_frame   0x00002fd0       0x34 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-memset.o)
- .debug_frame   0x00003004       0x30 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-mlock.o)
- .debug_frame   0x00003034       0x2c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-sbrkr.o)
- .debug_frame   0x00003060       0x20 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-setbuf.o)
- .debug_frame   0x00003080       0x48 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-setvbuf.o)
- .debug_frame   0x000030c8       0x84 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-sprintf.o)
- .debug_frame   0x0000314c       0x40 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-svfprintf.o)
- .debug_frame   0x0000318c       0xd8 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-vfiprintf.o)
- .debug_frame   0x00003264       0x2c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-wsetup.o)
- .debug_frame   0x00003290       0x5c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-__call_atexit.o)
- .debug_frame   0x000032ec       0x20 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-atexit.o)
- .debug_frame   0x0000330c       0x88 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-dtoa.o)
- .debug_frame   0x00003394       0x5c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-fflush.o)
- .debug_frame   0x000033f0      0x148 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-findfp.o)
- .debug_frame   0x00003538       0x34 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-fini.o)
- .debug_frame   0x0000356c       0x94 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-fputwc.o)
- .debug_frame   0x00003600       0x74 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-freer.o)
- .debug_frame   0x00003674       0x68 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-fvwrite.o)
- .debug_frame   0x000036dc       0x54 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-fwalk.o)
- .debug_frame   0x00003730       0x6c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-locale.o)
- .debug_frame   0x0000379c       0x40 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-localeconv.o)
- .debug_frame   0x000037dc       0xb0 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-lock.o)
- .debug_frame   0x0000388c       0x68 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-makebuf.o)
- .debug_frame   0x000038f4       0x4c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-mbtowc_r.o)
- .debug_frame   0x00003940       0x30 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-memmove.o)
- .debug_frame   0x00003970      0x25c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-mprec.o)
- .debug_frame   0x00003bcc       0x68 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-reallocr.o)
- .debug_frame   0x00003c34       0x58 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-reent.o)
- .debug_frame   0x00003c8c       0x88 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-stdio.o)
- .debug_frame   0x00003d14       0x78 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-svfiprintf.o)
- .debug_frame   0x00003d8c       0x40 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-wbuf.o)
- .debug_frame   0x00003dcc       0x5c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-wcrtomb.o)
- .debug_frame   0x00003e28       0x3c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-wctomb_r.o)
- .debug_frame   0x00003e64       0x2c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-writer.o)
- .debug_frame   0x00003e90       0x34 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-__atexit.o)
- .debug_frame   0x00003ec4       0x28 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-callocr.o)
- .debug_frame   0x00003eec       0x2c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-closer.o)
- .debug_frame   0x00003f18       0x3c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-fclose.o)
- .debug_frame   0x00003f54       0x2c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-fstatr.o)
- .debug_frame   0x00003f80       0x2c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-isattyr.o)
- .debug_frame   0x00003fac       0x2c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-lseekr.o)
- .debug_frame   0x00003fd8       0x2c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-readr.o)
- .debug_frame   0x00004004       0xac d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m\libgcc.a(_arm_addsubdf3.o)
- .debug_frame   0x000040b0       0x50 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m\libgcc.a(_arm_muldivdf3.o)
- .debug_frame   0x00004100       0xc4 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m\libgcc.a(_arm_cmpdf2.o)
- .debug_frame   0x000041c4       0x20 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m\libgcc.a(_arm_unorddf2.o)
- .debug_frame   0x000041e4       0x24 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m\libgcc.a(_arm_fixdfsi.o)
- .debug_frame   0x00004208       0x2c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m\libgcc.a(_aeabi_uldivmod.o)
- .debug_frame   0x00004234       0x34 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m\libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x00002c84      0x248 src/main.o
+ .debug_frame   0x00002ecc       0x2c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-init.o)
+ .debug_frame   0x00002ef8       0x74 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-iprintf.o)
+ .debug_frame   0x00002f6c       0x30 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-malloc.o)
+ .debug_frame   0x00002f9c       0x58 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-mallocr.o)
+ .debug_frame   0x00002ff4       0x34 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-memset.o)
+ .debug_frame   0x00003028       0x30 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-mlock.o)
+ .debug_frame   0x00003058       0x2c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-sbrkr.o)
+ .debug_frame   0x00003084       0x20 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-setbuf.o)
+ .debug_frame   0x000030a4       0x48 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-setvbuf.o)
+ .debug_frame   0x000030ec       0x84 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-sprintf.o)
+ .debug_frame   0x00003170       0x40 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-svfprintf.o)
+ .debug_frame   0x000031b0       0xd8 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-vfiprintf.o)
+ .debug_frame   0x00003288       0x2c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-wsetup.o)
+ .debug_frame   0x000032b4       0x5c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-__call_atexit.o)
+ .debug_frame   0x00003310       0x20 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-atexit.o)
+ .debug_frame   0x00003330       0x88 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-dtoa.o)
+ .debug_frame   0x000033b8       0x5c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-fflush.o)
+ .debug_frame   0x00003414      0x148 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-findfp.o)
+ .debug_frame   0x0000355c       0x34 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-fini.o)
+ .debug_frame   0x00003590       0x94 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-fputwc.o)
+ .debug_frame   0x00003624       0x74 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-freer.o)
+ .debug_frame   0x00003698       0x68 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-fvwrite.o)
+ .debug_frame   0x00003700       0x54 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-fwalk.o)
+ .debug_frame   0x00003754       0x6c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-locale.o)
+ .debug_frame   0x000037c0       0x40 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-localeconv.o)
+ .debug_frame   0x00003800       0xb0 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-lock.o)
+ .debug_frame   0x000038b0       0x68 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-makebuf.o)
+ .debug_frame   0x00003918       0x4c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-mbtowc_r.o)
+ .debug_frame   0x00003964       0x30 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-memmove.o)
+ .debug_frame   0x00003994      0x25c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-mprec.o)
+ .debug_frame   0x00003bf0       0x68 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-reallocr.o)
+ .debug_frame   0x00003c58       0x58 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-reent.o)
+ .debug_frame   0x00003cb0       0x88 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-stdio.o)
+ .debug_frame   0x00003d38       0x78 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-svfiprintf.o)
+ .debug_frame   0x00003db0       0x40 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-wbuf.o)
+ .debug_frame   0x00003df0       0x5c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-wcrtomb.o)
+ .debug_frame   0x00003e4c       0x3c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-wctomb_r.o)
+ .debug_frame   0x00003e88       0x2c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-writer.o)
+ .debug_frame   0x00003eb4       0x34 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-__atexit.o)
+ .debug_frame   0x00003ee8       0x28 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-callocr.o)
+ .debug_frame   0x00003f10       0x2c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-closer.o)
+ .debug_frame   0x00003f3c       0x3c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-fclose.o)
+ .debug_frame   0x00003f78       0x2c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-fstatr.o)
+ .debug_frame   0x00003fa4       0x2c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-isattyr.o)
+ .debug_frame   0x00003fd0       0x2c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-lseekr.o)
+ .debug_frame   0x00003ffc       0x2c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-readr.o)
+ .debug_frame   0x00004028       0xac d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m\libgcc.a(_arm_addsubdf3.o)
+ .debug_frame   0x000040d4       0x50 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m\libgcc.a(_arm_muldivdf3.o)
+ .debug_frame   0x00004124       0xc4 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m\libgcc.a(_arm_cmpdf2.o)
+ .debug_frame   0x000041e8       0x20 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m\libgcc.a(_arm_unorddf2.o)
+ .debug_frame   0x00004208       0x24 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m\libgcc.a(_arm_fixdfsi.o)
+ .debug_frame   0x0000422c       0x2c d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m\libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x00004258       0x34 d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m\libgcc.a(_udivmoddi4.o)
 
 Cross Reference Table
 
@@ -13552,7 +13945,9 @@ atexit                                            d:/gustavo-hd/atmel/studio/7.0
                                                   d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/crt0.o
 board_init                                        src/ASF/sam/boards/same70_xplained/init.o
                                                   src/main.o
+bufferMotor                                       src/main.o
 bufferPotencia                                    src/main.o
+butt_callback                                     src/main.o
 cleanup_glue                                      d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-reent.o)
 convert_axis_system_x                             src/main.o
 convert_axis_system_y                             src/main.o
@@ -13586,6 +13981,7 @@ g_interrupt_enabled                               src/ASF/common/utils/interrupt
                                                   src/ASF/sam/drivers/mpu/mpu.o
                                                   src/ASF/sam/drivers/afec/afec.o
 gfont                                             src/ASF/sam/components/display/ili9488/ili9488.o
+global_pwm_channel_led                            src/main.o
 hardware_init_hook                                d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/crt0.o
 ili9488_copy_pixels_from_screen                   src/ASF/sam/components/display/ili9488/ili9488.o
 ili9488_copy_pixels_to_screen                     src/ASF/sam/components/display/ili9488/ili9488.o
@@ -13622,6 +14018,7 @@ ili9488_set_top_left_limit                        src/ASF/sam/components/display
 ili9488_set_window                                src/ASF/sam/components/display/ili9488/ili9488.o
 ili9488_write_brightness                          src/ASF/sam/components/display/ili9488/ili9488.o
 ili9488_write_gram                                src/ASF/sam/components/display/ili9488/ili9488.o
+io_init                                           src/main.o
 iprintf                                           d:/gustavo-hd/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc.a(lib_a-iprintf.o)
                                                   src/main.o
 link                                              src/ASF/sam/utils/syscalls/gcc/syscalls.o
@@ -13694,6 +14091,7 @@ pio_capture_read                                  src/ASF/sam/drivers/pio/pio.o
 pio_capture_set_mode                              src/ASF/sam/drivers/pio/pio.o
 pio_clear                                         src/ASF/sam/drivers/pio/pio.o
 pio_configure                                     src/ASF/sam/drivers/pio/pio.o
+                                                  src/main.o
                                                   src/ASF/sam/boards/same70_xplained/init.o
 pio_configure_interrupt                           src/ASF/sam/drivers/pio/pio.o
                                                   src/ASF/sam/drivers/pio/pio_handler.o
@@ -13705,6 +14103,7 @@ pio_disable_interrupt                             src/ASF/sam/drivers/pio/pio.o
 pio_disable_output_write                          src/ASF/sam/drivers/pio/pio.o
 pio_disable_pin_interrupt                         src/ASF/sam/drivers/pio/pio.o
 pio_enable_interrupt                              src/ASF/sam/drivers/pio/pio.o
+                                                  src/main.o
                                                   src/ASF/sam/drivers/pio/pio_handler.o
 pio_enable_output_write                           src/ASF/sam/drivers/pio/pio.o
 pio_enable_pin_interrupt                          src/ASF/sam/drivers/pio/pio.o
@@ -13727,6 +14126,7 @@ pio_get_schmitt_trigger                           src/ASF/sam/drivers/pio/pio.o
 pio_get_writeprotect_status                       src/ASF/sam/drivers/pio/pio.o
 pio_handler_process                               src/ASF/sam/drivers/pio/pio_handler.o
 pio_handler_set                                   src/ASF/sam/drivers/pio/pio_handler.o
+                                                  src/main.o
 pio_handler_set_pin                               src/ASF/sam/drivers/pio/pio_handler.o
 pio_handler_set_priority                          src/ASF/sam/drivers/pio/pio_handler.o
 pio_pull_down                                     src/ASF/sam/drivers/pio/pio.o
@@ -13866,6 +14266,46 @@ pvTaskIncrementMutexHeldCount                     src/ASF/thirdparty/freertos/fr
                                                   src/ASF/thirdparty/freertos/freertos-8.2.3/Source/queue.o
 pvTimerGetTimerID                                 src/ASF/thirdparty/freertos/freertos-8.2.3/Source/timers.o
 pwm_callback                                      src/main.o
+pwm_channel_disable                               src/ASF/sam/drivers/pwm/pwm.o
+pwm_channel_disable_interrupt                     src/ASF/sam/drivers/pwm/pwm.o
+pwm_channel_enable                                src/ASF/sam/drivers/pwm/pwm.o
+pwm_channel_enable_interrupt                      src/ASF/sam/drivers/pwm/pwm.o
+pwm_channel_get_counter                           src/ASF/sam/drivers/pwm/pwm.o
+pwm_channel_get_interrupt_mask                    src/ASF/sam/drivers/pwm/pwm.o
+pwm_channel_get_interrupt_status                  src/ASF/sam/drivers/pwm/pwm.o
+pwm_channel_get_status                            src/ASF/sam/drivers/pwm/pwm.o
+pwm_channel_init                                  src/ASF/sam/drivers/pwm/pwm.o
+pwm_channel_update_dead_time                      src/ASF/sam/drivers/pwm/pwm.o
+pwm_channel_update_duty                           src/ASF/sam/drivers/pwm/pwm.o
+pwm_channel_update_leading_edge                   src/ASF/sam/drivers/pwm/pwm.o
+pwm_channel_update_output                         src/ASF/sam/drivers/pwm/pwm.o
+pwm_channel_update_period                         src/ASF/sam/drivers/pwm/pwm.o
+pwm_channel_update_spread                         src/ASF/sam/drivers/pwm/pwm.o
+pwm_cmp_change_setting                            src/ASF/sam/drivers/pwm/pwm.o
+pwm_cmp_disable_interrupt                         src/ASF/sam/drivers/pwm/pwm.o
+pwm_cmp_enable_interrupt                          src/ASF/sam/drivers/pwm/pwm.o
+pwm_cmp_get_period_counter                        src/ASF/sam/drivers/pwm/pwm.o
+pwm_cmp_get_update_counter                        src/ASF/sam/drivers/pwm/pwm.o
+pwm_cmp_init                                      src/ASF/sam/drivers/pwm/pwm.o
+pwm_disable_protect                               src/ASF/sam/drivers/pwm/pwm.o
+pwm_enable_protect                                src/ASF/sam/drivers/pwm/pwm.o
+pwm_fault_clear_status                            src/ASF/sam/drivers/pwm/pwm.o
+pwm_fault_get_input_level                         src/ASF/sam/drivers/pwm/pwm.o
+pwm_fault_get_status                              src/ASF/sam/drivers/pwm/pwm.o
+pwm_fault_init                                    src/ASF/sam/drivers/pwm/pwm.o
+pwm_get_interrupt_mask                            src/ASF/sam/drivers/pwm/pwm.o
+pwm_get_interrupt_status                          src/ASF/sam/drivers/pwm/pwm.o
+pwm_get_protect_status                            src/ASF/sam/drivers/pwm/pwm.o
+pwm_init                                          src/ASF/sam/drivers/pwm/pwm.o
+pwm_set_dma_duty                                  src/ASF/sam/drivers/pwm/pwm.o
+pwm_set_ext_trigger_mode                          src/ASF/sam/drivers/pwm/pwm.o
+pwm_stepper_motor_init                            src/ASF/sam/drivers/pwm/pwm.o
+pwm_sync_change_period                            src/ASF/sam/drivers/pwm/pwm.o
+pwm_sync_disable_interrupt                        src/ASF/sam/drivers/pwm/pwm.o
+pwm_sync_enable_interrupt                         src/ASF/sam/drivers/pwm/pwm.o
+pwm_sync_get_period_counter                       src/ASF/sam/drivers/pwm/pwm.o
+pwm_sync_init                                     src/ASF/sam/drivers/pwm/pwm.o
+pwm_sync_unlock_update                            src/ASF/sam/drivers/pwm/pwm.o
 pxCurrentTCB                                      src/ASF/thirdparty/freertos/freertos-8.2.3/Source/tasks.o
                                                   src/ASF/thirdparty/freertos/freertos-8.2.3/Source/portable/GCC/ARM_CM7/r0p1/port.o
 pxPortInitialiseStack                             src/ASF/thirdparty/freertos/freertos-8.2.3/Source/portable/GCC/ARM_CM7/r0p1/port.o

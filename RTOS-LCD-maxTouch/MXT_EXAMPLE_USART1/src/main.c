@@ -81,8 +81,14 @@ volatile uint32_t potencio_ul_value;
 
 volatile uint32_t potencio_convertida = 0;
 
-
+// Buffer do potenciometro
 char bufferPotencia[32];
+// Buffer do PWM
+char bufferMotor[32];
+
+// Criar o canal do pwm para o LED
+
+pwm_channel_t global_pwm_channel_led;
 
 typedef struct {
 	uint x;
@@ -92,8 +98,10 @@ typedef struct {
 
 QueueHandle_t xQueueTouch;
 
-
-void pot_callback(void);
+//Call back botao
+void butt_callback(void);
+//Call back Pwm
+void pwm_callback(void);
 
 
 /************************************************************************/
@@ -254,6 +262,43 @@ static void mxt_init(struct mxt_device *device)
 	mxt_write_config_reg(device, mxt_get_object_address(device,
 	MXT_GEN_COMMANDPROCESSOR_T6, 0)
 	+ MXT_GEN_COMMANDPROCESSOR_CALIBRATE, 0x01);
+}
+
+void io_init(void){
+	// Pmc para os PIOS
+	pmc_enable_periph_clk(EBUT1_PIO_ID);
+	pmc_enable_periph_clk(EBUT2_PIO_ID);
+
+	//Configura o pino como botao com pull-up
+	pio_configure(EBUT1_PIO, PIO_INPUT, EBUT1_PIO_IDX_MASK, PIO_DEBOUNCE|PIO_PULLUP);
+	pio_configure(EBUT2_PIO, PIO_INPUT, EBUT2_PIO_IDX_MASK, PIO_DEBOUNCE|PIO_PULLUP);
+	
+	// a função de callback é a: butt_callback() e do segundo botao pwm_callback();
+	pio_handler_set(EBUT1_PIO,
+	EBUT1_PIO_ID,
+	EBUT1_PIO_IDX_MASK,
+	PIO_IT_FALL_EDGE,
+	butt_callback);
+	
+	pio_handler_set(EBUT2_PIO,
+	EBUT2_PIO_ID,
+	EBUT2_PIO_IDX_MASK,
+	PIO_IT_FALL_EDGE,
+	pwm_callback);
+	
+	// Configura NVIC para receber interrupcoes do PIO do botao
+	// com prioridade 4 (quanto mais próximo de 0 maior)
+	NVIC_EnableIRQ(EBUT1_PIO_ID);
+	NVIC_SetPriority(EBUT1_PIO_ID, 5);
+	
+	NVIC_EnableIRQ(EBUT2_PIO_ID);
+	NVIC_SetPriority(EBUT2_PIO_ID, 5);
+	
+	// Ativa interrupção
+	pio_enable_interrupt(EBUT1_PIO, EBUT1_PIO_IDX_MASK);
+	pio_enable_interrupt(EBUT2_PIO, EBUT2_PIO_IDX_MASK);
+
+	
 }
 
 
