@@ -81,6 +81,10 @@ volatile uint32_t potencio_ul_value;
 
 volatile uint32_t potencio_convertida = 0;
 
+// Ciclo Pwm
+
+volatile uint32_t duty = 30;
+
 // Buffer do potenciometro
 char bufferPotencia[32];
 // Buffer do PWM
@@ -99,9 +103,9 @@ typedef struct {
 QueueHandle_t xQueueTouch;
 
 //Call back botao
-void butt_callback(void);
+void pwm_callback_add(void);
 //Call back Pwm
-void pwm_callback(void);
+void pwm_callback_sub(void);
 
 
 /************************************************************************/
@@ -151,8 +155,8 @@ extern void vApplicationMallocFailedHook(void)
 }
 	
 	/** Semaforo a ser usado pelas tasks */
-	SemaphoreHandle_t xSemaphorePot; 
-	SemaphoreHandle_t xSemaphorePwm;
+	SemaphoreHandle_t xSemaphorePwm_add; 
+	SemaphoreHandle_t xSemaphorePwm_sub;
 
 
 /************************************************************************/
@@ -278,13 +282,13 @@ void io_init(void){
 	EBUT1_PIO_ID,
 	EBUT1_PIO_IDX_MASK,
 	PIO_IT_FALL_EDGE,
-	butt_callback);
+	pwm_callback_add);
 	
 	pio_handler_set(EBUT2_PIO,
 	EBUT2_PIO_ID,
 	EBUT2_PIO_IDX_MASK,
 	PIO_IT_FALL_EDGE,
-	pwm_callback);
+	pwm_callback_sub);
 	
 	// Configura NVIC para receber interrupcoes do PIO do botao
 	// com prioridade 4 (quanto mais próximo de 0 maior)
@@ -302,101 +306,54 @@ void io_init(void){
 }
 
 
-void font_draw_text(tFont *font, const char *text, int x, int y, int spacing) {
-	char *p = text;
-	while(*p != NULL) {
-		char letter = *p;
-		int letter_offset = letter - font->start_char;
-		if(letter <= font->end_char) {
-			tChar *current_char = font->chars + letter_offset;
-			ili9488_draw_pixmap(x, y, current_char->image->width, current_char->image->height, current_char->image->data);
-			x += current_char->image->width + spacing;
-		}
-		p++;
-	}
-}
+void PWM0_init(uint channel, uint duty){
+	/* Enable PWM peripheral clock */
+	pmc_enable_periph_clk(ID_PWM0);
 
-void draw_screen(void) {
-	ili9488_set_foreground_color(COLOR_CONVERT(COLOR_WHITE));
-	ili9488_draw_filled_rectangle(0, 0, ILI9488_LCD_WIDTH-1, ILI9488_LCD_HEIGHT-1);
-	ili9488_draw_pixmap(20, 250, ar.width, ar.height, ar.data);
-	font_draw_text(&digital52, "100%", 110, 250, 1);
-	ili9488_draw_pixmap(30, 380, termometro.width, termometro.height, termometro.data);
-	font_draw_text(&digital52, "15", 110, 380, 1);
-	ili9488_draw_pixmap(210, 20, soneca.width, soneca.height, soneca.data);
-}
+	/* Disable PWM channels for LEDs */
+	pwm_channel_disable(PWM0, PIN_PWM_LED0_CHANNEL);
 
-
-uint32_t convert_axis_system_x(uint32_t touch_y) {
-	// entrada: 4096 - 0 (sistema de coordenadas atual)
-	// saida: 0 - 320
-	return ILI9488_LCD_WIDTH - ILI9488_LCD_WIDTH*touch_y/4096;
-}
-
-uint32_t convert_axis_system_y(uint32_t touch_x) {
-	// entrada: 0 - 4096 (sistema de coordenadas atual)
-	// saida: 0 - 320
-	return ILI9488_LCD_HEIGHT*touch_x/4096;
-}
-
-void update_screen() {
-	ili9488_draw_filled_rectangle(100, 350,110,380);
-	sprintf(bufferPotencia,"%d",potencio_convertida);
-	font_draw_text(&digital52, bufferPotencia, 110, 380, 1);
-}
-
-
-void mxt_handler(struct mxt_device *device, uint *x, uint *y)
-{
-	/* USART tx buffer initialized to 0 */
-	uint8_t i = 0; /* Iterator */
-
-	/* Temporary touch event data struct */
-	struct mxt_touch_event touch_event;
+	/* Set PWM clock A as PWM_FREQUENCY*PERIOD_VALUE (clock B is not used) */
+	pwm_clock_t clock_setting = {
+		.ul_clka = PWM_FREQUENCY * PERIOD_VALUE,
+		.ul_clkb = 0,
+		.ul_mck = sysclk_get_peripheral_hz()
+	};
 	
-	/* first touch only */
-	uint first = 0;
+	pwm_init(PWM0, &clock_setting);
 
-	/* Collect touch events and put the data in a string,
-	* maximum 2 events at the time */
-	do {
-
-		/* Read next next touch event in the queue, discard if read fails */
-		if (mxt_read_touch_event(device, &touch_event) != STATUS_OK) {
-			continue;
-		}
-		
-		/************************************************************************/
-		/* Envia dados via fila RTOS                                            */
-		/************************************************************************/
-		if(first == 0 ){
-			*x = convert_axis_system_x(touch_event.y);
-			*y = convert_axis_system_y(touch_event.x);
-			first = 1;
-		}
-		
-		i++;
-
-		/* Check if there is still messages in the queue and
-		* if we have reached the maximum numbers of events */
-	} while ((mxt_is_message_pending(device)) & (i < MAX_ENTRIES));
+	/* Initialize PWM channel for LED0 */
+	/* Period is left-aligned */
+	global_pwm_channel_led.alignment = PWM_ALIGN_CENTER;
+	/* Output waveform starts at a low level */
+	global_pwm_channel_led.polarity = PWM_HIGH;
+	/* Use PWM clock A as source clock */
+	global_pwm_channel_led.ul_prescaler = PWM_CMR_CPRE_CLKA;
+	/* Period value of output waveform */
+	global_pwm_channel_led.ul_period = PERIOD_VALUE;
+	/* Duty cycle value of output waveform */
+	global_pwm_channel_led.ul_duty = duty;
+	global_pwm_channel_led.channel = channel;
+	pwm_channel_init(PWM0, &global_pwm_channel_led);
+	
+	/* Enable PWM channels for LEDs */
+	pwm_channel_enable(PWM0, channel);
 }
-
 
 /************************************************************************/
 /* funcoes e Callbacks                                                   */
 /************************************************************************/
 
-void pot_callback(void)
+void pwm_callback_add(void)
 {
 	BaseType_t xHigherPriorityTaskWoken = pdFALSE;
-	xSemaphoreGiveFromISR(xSemaphorePot, &xHigherPriorityTaskWoken);
+	xSemaphoreGiveFromISR(xSemaphorePwm_add, &xHigherPriorityTaskWoken);
 }
 
-void pwm_callback(void)
+void pwm_callback_sub(void)
 {
 	BaseType_t xHigherPriorityTaskWoken = pdFALSE;
-	xSemaphoreGiveFromISR(xSemaphorePwm, &xHigherPriorityTaskWoken);
+	xSemaphoreGiveFromISR(xSemaphorePwm_sub, &xHigherPriorityTaskWoken);
 }
 
 
@@ -464,6 +421,87 @@ static int32_t convertAnalogic(int32_t ADC_value){
 	
 }
 
+void font_draw_text(tFont *font, const char *text, int x, int y, int spacing) {
+	char *p = text;
+	while(*p != NULL) {
+		char letter = *p;
+		int letter_offset = letter - font->start_char;
+		if(letter <= font->end_char) {
+			tChar *current_char = font->chars + letter_offset;
+			ili9488_draw_pixmap(x, y, current_char->image->width, current_char->image->height, current_char->image->data);
+			x += current_char->image->width + spacing;
+		}
+		p++;
+	}
+}
+
+void draw_screen(void) {
+	ili9488_set_foreground_color(COLOR_CONVERT(COLOR_WHITE));
+	ili9488_draw_filled_rectangle(0, 0, ILI9488_LCD_WIDTH-1, ILI9488_LCD_HEIGHT-1);
+	ili9488_draw_pixmap(20, 250, ar.width, ar.height, ar.data);
+	font_draw_text(&digital52, "%", 140, 250, 1);
+	ili9488_draw_pixmap(30, 380, termometro.width, termometro.height, termometro.data);
+	font_draw_text(&digital52, "15", 110, 380, 1);
+	ili9488_draw_pixmap(210, 20, soneca.width, soneca.height, soneca.data);
+}
+
+
+uint32_t convert_axis_system_x(uint32_t touch_y) {
+	// entrada: 4096 - 0 (sistema de coordenadas atual)
+	// saida: 0 - 320
+	return ILI9488_LCD_WIDTH - ILI9488_LCD_WIDTH*touch_y/4096;
+}
+
+uint32_t convert_axis_system_y(uint32_t touch_x) {
+	// entrada: 0 - 4096 (sistema de coordenadas atual)
+	// saida: 0 - 320
+	return ILI9488_LCD_HEIGHT*touch_x/4096;
+}
+
+void update_screen() {
+	ili9488_draw_filled_rectangle(100, 350,110,380);
+	sprintf(bufferPotencia,"%d",potencio_convertida);
+	font_draw_text(&digital52, bufferPotencia, 110, 380, 1);
+}
+
+
+void mxt_handler(struct mxt_device *device, uint *x, uint *y)
+{
+	/* USART tx buffer initialized to 0 */
+	uint8_t i = 0; /* Iterator */
+
+	/* Temporary touch event data struct */
+	struct mxt_touch_event touch_event;
+	
+	/* first touch only */
+	uint first = 0;
+
+	/* Collect touch events and put the data in a string,
+	* maximum 2 events at the time */
+	do {
+
+		/* Read next next touch event in the queue, discard if read fails */
+		if (mxt_read_touch_event(device, &touch_event) != STATUS_OK) {
+			continue;
+		}
+		
+		/************************************************************************/
+		/* Envia dados via fila RTOS                                            */
+		/************************************************************************/
+		if(first == 0 ){
+			*x = convert_axis_system_x(touch_event.y);
+			*y = convert_axis_system_y(touch_event.x);
+			first = 1;
+		}
+		
+		i++;
+
+		/* Check if there is still messages in the queue and
+		* if we have reached the maximum numbers of events */
+	} while ((mxt_is_message_pending(device)) & (i < MAX_ENTRIES));
+}
+
+
 /************************************************************************/
 /* tasks                                                                */
 /************************************************************************/
@@ -497,14 +535,35 @@ void task_lcd(void){
 	font_draw_text(&digital52, "HH:MM", 0, 0, 1);
 	
 	// Aumentar o Ciclo
-	xSemaphorePot = xSemaphoreCreateBinary();
+	xSemaphorePwm_add = xSemaphoreCreateBinary();
 	// Diminuir o Ciclo
-	xSemaphorePwm = xSemaphoreCreateBinary(); 
+	xSemaphorePwm_sub = xSemaphoreCreateBinary(); 
+	
+	// Aqui sera onde eu irei comnparar o XSemaphore para o buffer do pwm ser escrito, tanto se for aumentar, quanto pra condicao de diminuir
+	// Ver se o xSemaphore eh nulo
+	
+	if (xSemaphorePwm_add == NULL)
+	printf("falha em criar o semaforo \n");
 
-	touchData touch;
+	pwm_channel_update_duty(PWM0, &global_pwm_channel_led, 100-duty);
+
+	PWM0_init(0, duty);
+	
+	io_init();
+
 	
 	while (true) {
 		update_screen();
+			// Esta condicao ira atualizar o valor do ciclo aumentando-o de 10 a cada clicada 
+			if( xSemaphoreTake(xSemaphorePwm_add, ( TickType_t ) 500) == pdTRUE ){
+				if (duty<100){
+					duty+=10;
+				}
+				pwm_channel_update_duty(PWM0, &global_pwm_channel_led, 100-duty);
+				ili9488_draw_filled_rectangle(110, 250, 130, 290);
+				sprintf(bufferPotencia, "%d", duty);
+				font_draw_text(&digital52, bufferPotencia, 110, 250, 1);
+			}
 			
 		}
 	}
