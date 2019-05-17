@@ -439,7 +439,6 @@ void draw_screen(void) {
 	ili9488_set_foreground_color(COLOR_CONVERT(COLOR_WHITE));
 	ili9488_draw_filled_rectangle(0, 0, ILI9488_LCD_WIDTH-1, ILI9488_LCD_HEIGHT-1);
 	ili9488_draw_pixmap(20, 250, ar.width, ar.height, ar.data);
-	font_draw_text(&digital52, "%", 140, 250, 1);
 	ili9488_draw_pixmap(30, 380, termometro.width, termometro.height, termometro.data);
 	font_draw_text(&digital52, "15", 110, 380, 1);
 	ili9488_draw_pixmap(210, 20, soneca.width, soneca.height, soneca.data);
@@ -562,6 +561,17 @@ void task_lcd(void){
 				pwm_channel_update_duty(PWM0, &global_pwm_channel_led, 100-duty);
 				ili9488_draw_filled_rectangle(110, 250, 130, 290);
 				sprintf(bufferPotencia, "%d", duty);
+				font_draw_text(&digital52, bufferPotencia, 110, 250, 1);
+				font_draw_text(&digital52, "%", 180, 250, 1);
+			}
+			if( xSemaphoreTake(xSemaphorePwm_sub, ( TickType_t ) 500) == pdTRUE ){
+				if (duty<100){
+					duty-=10;
+				}
+				pwm_channel_update_duty(PWM0, &global_pwm_channel_led, 100-duty);
+				ili9488_draw_filled_rectangle(110, 250, 130, 290);
+				sprintf(bufferPotencia, "%d", duty);
+				font_draw_text(&digital52, "%", 180, 250, 1);
 				font_draw_text(&digital52, bufferPotencia, 110, 250, 1);
 			}
 			
