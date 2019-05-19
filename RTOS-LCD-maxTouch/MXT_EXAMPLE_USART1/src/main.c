@@ -46,6 +46,11 @@
 #define INIT_DUTY_VALUE    0
 
 
+#define PIO_PWM_0 PIOA
+#define ID_PIO_PWM_0 ID_PIOA
+#define MASK_PIN_PWM_0 (1 << 0)
+
+
 /************************************************************************/
 /* AFEC                                                             */
 /************************************************************************/
@@ -83,10 +88,10 @@ volatile uint32_t potencio_convertida = 0;
 
 // Ciclo Pwm
 
-volatile uint32_t duty = 30;
+volatile int32_t duty = 30;
 
 // Buffer do potenciometro
-char bufferPotencia[32];
+char bufferPotencia[3];
 // Buffer do PWM
 char bufferMotor[32];
 
@@ -338,6 +343,10 @@ void PWM0_init(uint channel, uint duty){
 	
 	/* Enable PWM channels for LEDs */
 	pwm_channel_enable(PWM0, channel);
+	
+	/* Configura pino para ser controlado pelo PWM */
+	pmc_enable_periph_clk(ID_PIO_PWM_0);
+	pio_set_peripheral(PIO_PWM_0, PIO_PERIPH_A, MASK_PIN_PWM_0 );
 }
 
 /************************************************************************/
@@ -461,6 +470,7 @@ void update_screen() {
 	ili9488_draw_filled_rectangle(100, 350,110,380);
 	sprintf(bufferPotencia,"%d",potencio_convertida);
 	font_draw_text(&digital52, bufferPotencia, 110, 380, 1);
+	font_draw_text(&digital52, "C", 180, 380, 1);
 }
 
 
@@ -523,8 +533,6 @@ void task_mxt(void){
 
 void task_lcd(void){
 	
-	const TickType_t xDelay = 4000/ portTICK_PERIOD_MS;
-	
 	xQueueTouch = xQueueCreate( 10, sizeof( touchData ) );
 	configure_lcd();
 	
@@ -554,24 +562,20 @@ void task_lcd(void){
 	while (true) {
 		update_screen();
 			// Esta condicao ira atualizar o valor do ciclo aumentando-o de 10 a cada clicada 
-			if( xSemaphoreTake(xSemaphorePwm_add, ( TickType_t ) 500) == pdTRUE ){
-				if (duty<100){
-					duty+=10;
-				}
+			if( xSemaphoreTake(xSemaphorePwm_add, ( TickType_t ) 10) == pdTRUE ){
+				duty+=10;
+				if(duty>=100) duty=100;
 				pwm_channel_update_duty(PWM0, &global_pwm_channel_led, 100-duty);
 				ili9488_draw_filled_rectangle(110, 250, 130, 290);
-				sprintf(bufferPotencia, "%d", duty);
+				sprintf(bufferPotencia, "%3d%", duty);
 				font_draw_text(&digital52, bufferPotencia, 110, 250, 1);
-				font_draw_text(&digital52, "%", 180, 250, 1);
 			}
-			if( xSemaphoreTake(xSemaphorePwm_sub, ( TickType_t ) 500) == pdTRUE ){
-				if (duty<100){
-					duty-=10;
-				}
+			if( xSemaphoreTake(xSemaphorePwm_sub, ( TickType_t ) 10) == pdTRUE ){
+				duty-=10;
+				if(duty<=0) duty=0;
 				pwm_channel_update_duty(PWM0, &global_pwm_channel_led, 100-duty);
 				ili9488_draw_filled_rectangle(110, 250, 130, 290);
-				sprintf(bufferPotencia, "%d", duty);
-				font_draw_text(&digital52, "%", 180, 250, 1);
+				sprintf(bufferPotencia, "%3d%", duty);
 				font_draw_text(&digital52, bufferPotencia, 110, 250, 1);
 			}
 			
